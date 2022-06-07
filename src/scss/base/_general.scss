@@ -1,0 +1,79 @@
+body {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F7F7F7;
+}
+
+.owh {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    
+    height: inherit;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.center_block {
+    max-width: 1500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+// scrollbar
+/* width */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #292B3A;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #02CA8D;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #02CA8D;
+}
+
+// scrollbar end

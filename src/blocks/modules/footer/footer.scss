@@ -1,0 +1,112 @@
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 40px;
+    &__logo {
+        display: block;
+        flex: 0 0 183px;
+        margin-right: 20px;
+    }
+    &__address, &__tels {
+        span {
+            display: block;
+            margin-bottom: 12px;
+        }
+    }
+    &__address {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #9797A5;
+        max-width: 270px;
+        width: 100%;
+    }
+    &__adr {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        text-transform: initial;
+        color: #131313;
+    }
+    &__tels {
+        max-width: 250px;
+        width: 100%;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #9797A5;
+    }
+    &__tel {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        text-transform: initial;
+        color: #131313;
+        text-decoration: none;
+        display: inline-block;
+    }
+    &__info {
+        max-width: 240px;
+        width: 100%;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+    &__socs {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    &__soc {
+        margin-left: 15px;
+        margin-bottom: 5px;
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+    &__copy {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #9797A5;
+    }
+}
+.isTablet, .isMobile {
+    .footer {
+        justify-content: center;
+        margin-top: 30px;
+        &__logo {
+            flex: none;
+            margin-right: 0;
+            max-width: 183px;
+            width: 100%;
+        }
+        &__address, &__tels, &__info {
+            display: none;
+        }
+    }
+}
