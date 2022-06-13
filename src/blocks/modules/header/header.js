@@ -1,13 +1,19 @@
-const Header = class Header {
-    constructor({someVareible}){
-        this.someVareible = someVareible;
+const MainHeader = class MainHeader {
+    constructor(){
+        this.isMobileMenuOpened = false;
     }
-    someMethod() {
-        console.log(this.someVareible);
+    toogleMobileMenu() {
+        this.isMobileMenuOpened = !this.isMobileMenuOpened;
+    }
+    setEventListener() {
+        if (!document.querySelector('.burger__icon')) return;
+        document.querySelector('.burger__icon').addEventListener('click', () => {
+            this.toogleMobileMenu();
+        }) 
     }
     init() {
-        this.someMethod();
+        this.setEventListener();
     }
 }
 
-export default Header;
+export default MainHeader;

@@ -380,6 +380,13 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: "HeliosBlackC";
   font-display: swap;
   src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
@@ -389,21 +396,14 @@ template {
 @font-face {
   font-family: "HeliosC";
   font-display: swap;
-  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "HeliosCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -436,13 +436,6 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondThinC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondThinC.woff2") format("woff2"), url("../fonts/HeliosCondThinC.woff") format("woff"), url("../fonts/HeliosCondThinC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosExtBlackC";
   font-display: swap;
   src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
@@ -454,13 +447,6 @@ template {
   font-display: swap;
   src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
   font-weight: 700;
-}
-
-@font-face {
-  font-family: "HeliosExtC";
-  font-display: swap;
-  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
-  font-weight: 400;
 }
 
 @font-face {
@@ -485,13 +471,6 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosLightC";
-  font-display: swap;
-  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosThinC";
   font-display: swap;
   src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
@@ -499,9 +478,30 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosLightC";
+  font-display: swap;
+  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "HeliosUltraCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosUltraCompressedC.woff2") format("woff2"), url("../fonts/HeliosUltraCompressedC.woff") format("woff"), url("../fonts/HeliosUltraCompressedC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosExtC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondThinC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondThinC.woff2") format("woff2"), url("../fonts/HeliosCondThinC.woff") format("woff"), url("../fonts/HeliosCondThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -586,11 +586,198 @@ textarea {
   background: #02CA8D;
 }
 
+.header {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 60px rgba(0, 111, 171, 0.2);
+  position: relative;
+}
+
+.header__in {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  width: 100%;
+}
+
+.burger {
+  max-width: 300px;
+  width: 100%;
+}
+
+.burger__icon {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 30H52.5' stroke='%23131313' stroke-width='5' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M7.5 15H52.5' stroke='%23131313' stroke-width='5' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M7.5 45H52.5' stroke='%23131313' stroke-width='5' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
+}
+
+.burger__icon.isActive {
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.0001 26.4648L42.3751 14.0898L45.9101 17.6248L33.5351 29.9998L45.9101 42.3748L42.3751 45.9098L30.0001 33.5348L17.6251 45.9098L14.0901 42.3748L26.4651 29.9998L14.0901 17.6248L17.6251 14.0898L30.0001 26.4648Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
+}
+
+.burger__body {
+  background: #F7F7F7;
+  height: calc(100vh - 100px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+}
+
+.burger__body.isActive {
+  transform: translateX(0);
+}
+
+.burger__in {
+  display: flex;
+  padding-top: 65px;
+  position: relative;
+}
+
+.burger__in:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  left: 15px;
+  right: 0;
+  top: 100px;
+  background: #E8E8E8;
+  height: 1px;
+}
+
+.burger__item {
+  max-width: 250px;
+  width: 100%;
+  margin-right: 5px;
+}
+
+.burger__title {
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #B6B6C6;
+}
+
+.burger__menu {
+  max-width: 200px;
+  width: 100%;
+}
+
+.burger__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.burger__menu ul li a {
+  display: inline-block;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #006FAB;
+  text-decoration: none;
+}
+
+.burger__menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.burger__menu ul li:not(:last-child) a {
+  margin-bottom: 28px;
+}
+
+.user_h {
+  width: 100%;
+}
+
+.user_h__icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user_h__icon:before {
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0002 13.1722L16.9502 8.22217L18.3642 9.63617L12.0002 16.0002L5.63623 9.63617L7.05023 8.22217L12.0002 13.1722Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+}
+
+.user_h__name {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #131313;
+  margin-right: 5px;
+}
+
+.user_h__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_h__avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.alert_h {
+  margin-left: 32px;
+  flex: 0 0 60px;
+}
+
+.alert_h__icon {
+  width: 60px;
+  cursor: pointer;
+  height: 60px;
+  border: 2px solid #F7F7F7;
+  border-radius: 50%;
+  background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.3332 26.6665H2.6665V23.9998H3.99984V14.7078C3.99984 8.05717 9.37317 2.6665 15.9998 2.6665C22.6265 2.6665 27.9998 8.05717 27.9998 14.7078V23.9998H29.3332V26.6665ZM6.6665 23.9998H25.3332V14.7078C25.3332 9.5305 21.1545 5.33317 15.9998 5.33317C10.8452 5.33317 6.6665 9.5305 6.6665 14.7078V23.9998ZM12.6665 27.9998H19.3332C19.3332 28.8839 18.982 29.7317 18.3569 30.3569C17.7317 30.982 16.8839 31.3332 15.9998 31.3332C15.1158 31.3332 14.2679 30.982 13.6428 30.3569C13.0177 29.7317 12.6665 28.8839 12.6665 27.9998Z' fill='%23131313'/%3E%3Crect x='19' y='1' width='12' height='12' rx='6' fill='%2334A853'/%3E%3Crect x='19' y='1' width='12' height='12' rx='6' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A") 50% no-repeat;
+}
+
 .footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-top: 40px;
+  padding-bottom: 60px;
 }
 
 .footer__logo {
@@ -697,6 +884,7 @@ textarea {
 .isMobile .footer {
   justify-content: center;
   margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 .isTablet .footer__logo,

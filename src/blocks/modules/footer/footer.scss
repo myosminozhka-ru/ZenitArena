@@ -3,6 +3,7 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-top: 40px;
+    padding-bottom: 60px;
     &__logo {
         display: block;
         flex: 0 0 183px;
@@ -99,6 +100,7 @@
     .footer {
         justify-content: center;
         margin-top: 30px;
+        padding-bottom: 20px;
         &__logo {
             flex: none;
             margin-right: 0;

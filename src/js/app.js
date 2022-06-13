@@ -4,7 +4,7 @@ globalFunctions.isWebp();
 import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 
-import Header from '../blocks/modules/header/header.js';
+import MainHeader from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -16,8 +16,8 @@ window.app = new Vue({
             mobile: 768,
             window: window.innerWidth
         },
-        header: new Header({
-            someVareible: 'someVareible'
+        mainHeader: new MainHeader({
+            isMobileMenuOpened: false,
         }),
         modals: new Modals({
             modalsSelector: "data-modal",
@@ -30,9 +30,11 @@ window.app = new Vue({
             this.sizes.window = window.innerWidth;
         });
     },
+    mounted() {
+        this.mainHeader.init();
+    },
     beforeMount() {
         this.isMounted = true;
-        this.header.init();
         this.modals.init();
     },
     computed: {
