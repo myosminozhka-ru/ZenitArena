@@ -7,6 +7,12 @@ import $ from 'jquery';
 import MainHeader from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
+$(function() {
+    $('.hasChild a span').on('click', function() {
+        $(this).parents('.hasChild').toggleClass('isActive');
+    })
+});
+
 window.app = new Vue({
     el: '#app',
     data: () => ({

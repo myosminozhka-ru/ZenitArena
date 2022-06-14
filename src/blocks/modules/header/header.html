@@ -5,60 +5,80 @@
             <div class="burger__body" :class="{'isActive': mainHeader.isMobileMenuOpened}">
                 <div class="burger__in center_block">
                     <div class="burger__item">
-                        <div class="burger__title">О компании</div>
                         <nav class="burger__menu">
                             <ul>
-                                <li><a href="#">История</a></li>
-                                <li><a href="#">Руководство</a></li>
-                                <li><a href="#">Этика и принципы</a></li>
-                                <li><a href="#">Реквизиты</a></li>
-                                <li><a href="#">Вакансии</a></li>
+                                <li class="hasChild">
+                                    <a href="#">О компании<span></span></a>
+                                    <ul>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Руководство</a></li>
+                                        <li><a href="#">Этика и принципы</a></li>
+                                        <li><a href="#">Реквизиты</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="burger__item">
-                        <div class="burger__title">Информация</div>
                         <nav class="burger__menu">
                             <ul>
-                                <li><a href="#">Новости администрации</a></li>
-                                <li><a href="#">Новости сотрудников</a></li>
-                                <li><a href="#">Обьявления</a></li>
-                                <li><a href="#">События</a></li>
-                                <li><a href="#">Вакансии</a></li>
+                                <li class="hasChild">
+                                    <a href="#">Информация<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Новости администрации</a></li>
+                                        <li><a href="#">Новости сотрудников</a></li>
+                                        <li><a href="#">Обьявления</a></li>
+                                        <li><a href="#">События</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="burger__item">
-                        <div class="burger__title">Сервисы</div>
                         <nav class="burger__menu">
                             <ul>
-                                <li><a href="#">Служба безопасности</a></li>
-                                <li><a href="#">Отдел IT</a></li>
-                                <li><a href="#">Отдел хозяйственного обеспечения</a></li>
-                                <li><a href="#">Экскурсии</a></li>
-                                <li><a href="#">Внешние сервисы</a></li>
-                                <li><a href="#">Отдел HR</a></li>
+                                <li class="hasChild">
+                                    <a href="#">Сервисы<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Служба безопасности</a></li>
+                                        <li><a href="#">Отдел IT</a></li>
+                                        <li><a href="#">Отдел хозяйственного обеспечения</a></li>
+                                        <li><a href="#">Экскурсии</a></li>
+                                        <li><a href="#">Внешние сервисы</a></li>
+                                        <li><a href="#">Отдел HR</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="burger__item">
-                        <div class="burger__title">База знаний</div>
                         <nav class="burger__menu">
                             <ul>
-                                <li><a href="#">Нормативные документы</a></li>
-                                <li><a href="#">Экология</a></li>
-                                <li><a href="#">Шаблоны документов</a></li>
-                                <li><a href="#">Брендбук</a></li>
-                                <li><a href="#">Фото/видео</a></li>
+                                <li class="hasChild">
+                                    <a href="#">База знаний<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Нормативные документы</a></li>
+                                        <li><a href="#">Экология</a></li>
+                                        <li><a href="#">Шаблоны документов</a></li>
+                                        <li><a href="#">Брендбук</a></li>
+                                        <li><a href="#">Фото/видео</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="burger__item">
-                        <div class="burger__title">Сотрудники</div>
                         <nav class="burger__menu">
                             <ul>
-                                <li><a href="#">Структура и сотрудники</a></li>
-                                <li><a href="#">Календарь дней рождения</a></li>
+                                <li class="hasChild">
+                                    <a href="#">Сотрудники<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Структура и сотрудники</a></li>
+                                        <li><a href="#">Календарь дней рождения</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -66,18 +86,16 @@
             </div>
         </div>
         <a href="#" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
-        <div class="header__info">
-            <div class="user_h">
-                <div class="user_h__icon">
-                    <div class="user_h__name">Иван Иванов</div>
-                    <div class="user_h__avatar"><img src="./img/avatar.png" alt=""></div>
-                </div>
-                <div class="user_h__body"></div>
+        <div class="user_h">
+            <div class="user_h__icon">
+                <div class="user_h__name">Иван Иванов</div>
+                <div class="user_h__avatar"><img src="./img/avatar.png" alt=""></div>
             </div>
-            <div class="alert_h">
-                <div class="alert_h__icon"></div>
-                <div class="alert_h__body"></div>
-            </div>
+            <div class="user_h__body"></div>
+        </div>
+        <div class="alert_h">
+            <div class="alert_h__icon"></div>
+            <div class="alert_h__body"></div>
         </div>
     </div>
 </header>
