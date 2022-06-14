@@ -3,6 +3,7 @@ globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
+import 'slick-carousel';
 
 import MainHeader from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
@@ -10,7 +11,12 @@ import Modals from '../blocks/modules/modals/modals.js';
 $(function() {
     $('.hasChild a span').on('click', function() {
         $(this).parents('.hasChild').toggleClass('isActive');
-    })
+    });
+    $('.sl_js').slick({
+        dots: true,
+        arrows: true,
+        infinite: false
+    });
 });
 
 window.app = new Vue({

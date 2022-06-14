@@ -7,11 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="main_page">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         @@include('blocks/modules/header/header.html', {})
-        <main class="content">
-            
+        <main class="content center_block">
+            @@include('blocks/modules/aside_l/aside_l.html', {})
+            @@include('blocks/modules/main_content/main_content.html', {})
+            @@include('blocks/modules/aside_r/aside_r.html', {})
         </main>
         @@include('blocks/modules/footer/footer.html', {})
         @@include('blocks/modules/modals/main.modal.html', {})
