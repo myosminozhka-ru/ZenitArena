@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220614145528">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20220615134656">
 </head>
 <body class="main_page">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -137,7 +137,7 @@
         </div>
     </div>
     <div class="weather_block">
-        <script src="https://apps.elfsight.com/p/platform.js?_v=20220614145528" defer></script>
+        <script src="https://apps.elfsight.com/p/platform.js?_v=20220615134656" defer></script>
         <div class="elfsight-app-2678f6d1-c575-440d-b204-a9b85ea6fc25"></div>
     </div>
     <div class="calendar_block">
@@ -162,13 +162,16 @@
             <a href="#" class="calendar_block__more">Все события</a>
         </div>
     </div>
+    <a href="#" class="calendar_block__more mob">Все события</a>
 </aside>
             <div class="main_content">
-    <a href="#" class="news_block">
-        <div class="news_block__img"><picture><source srcset="./img/bg3.webp" type="image/webp"><img src="./img/bg3.jpg" alt=""></picture></div>
-        <div class="news_block__flag">Новость дня</div>
-        <div class="news_block__title">Совет директоров рассмотрел вопросы проведения годового общего собрания акционеров</div>
-    </a>
+    <div class="news_block__item">
+        <a href="#" class="news_block">
+            <div class="news_block__img"><picture><source srcset="./img/bg3.webp" type="image/webp"><img src="./img/bg3.jpg" alt=""></picture></div>
+            <div class="news_block__flag">Новость дня</div>
+            <div class="news_block__title">Совет директоров рассмотрел вопросы проведения годового общего собрания акционеров</div>
+        </a>
+    </div>
     <div class="blog_news">
          <div class="blog_news__top">
             <div class="blog_news__title">Свежие новости</div>
@@ -205,6 +208,7 @@
                 </div>
             </a>
          </div>
+         <a href="#" class="blog_news__more mob">Все новости</a>
     </div>
     <div class="block_red">
         <div class="block_red__img"><picture><source srcset="./img/bg4.webp" type="image/webp"><img src="./img/bg4.jpg" alt=""></picture></div>
@@ -257,6 +261,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220614145528"></script>
+    <script src="js/app.min.js?_v=20220615134656"></script>
 </body>
 </html>

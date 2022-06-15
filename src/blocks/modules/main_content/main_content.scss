@@ -2,14 +2,25 @@
     .content {
         display: flex;
         justify-content: space-between;
+        @media all and (max-width: 1330px) {
+            flex-direction: row-reverse;
+        }
+    }
+    .isTablet, .isMobile {
+        .content {
+            flex-direction: column-reverse;
+        }
     }
 }
 .main_content {
-    width: calc(100% - 750px);
+    width: calc(100% - 46.1% - 80px);
+    @media all and (max-width: 1330px) {
+        width: calc(100% - 340px);
+    }
 }
 .blog_news {
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     &__top {
         display: flex;
         align-items: center;
@@ -40,6 +51,9 @@
         color: #131313;
         &:hover { 
             text-decoration: underline;
+        }
+        &.mob {
+            display: none;
         }
     }
     &__block {
@@ -104,5 +118,67 @@
         font-size: 18px;
         line-height: 140%;
         color: #131313;
+    }
+}
+.isTablet, .isMobile {
+    .main_content {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .news_block__item {
+        .news_block {
+            padding: 16px;
+            &:nth-child(1) {
+                height: 380px;
+            }
+            &:nth-child(2) {
+                height: 230px;
+            }
+            &__title {
+                font-size: 18px;
+            }
+        }
+    }
+    .blog_news {
+        &__more {
+            display: none;
+            &.mob {
+                margin-top: 12px;
+                display: block;
+                font-family: 'HeliosC', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                width: 100%;
+                text-align: center;
+                color: #F7F7F7;
+                background: #006FAB;
+                border-radius: 10px;
+                padding: 15px 10px;
+            }
+        }
+        &__blocks {
+            padding: 16px;
+        }
+        &__block {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+                padding-bottom: 16px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+    .block_red {
+        display: none;
+    }
+}
+.isMobile {
+    .blog_news {
+        &__img {
+            display: none;
+        }
     }
 }
