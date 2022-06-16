@@ -4,6 +4,7 @@ globalFunctions.isWebp();
 import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 import 'slick-carousel';
+import { responsiveTabs } from 'responsive-tabs';
 
 import MainHeader from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
@@ -30,6 +31,10 @@ $(function() {
         }
     });
     $(window).trigger('resize');
+    
+    $('#responsiveTabsDemo').responsiveTabs({
+        startCollapsed: 'accordion'
+    });
 });
 
 window.app = new Vue({

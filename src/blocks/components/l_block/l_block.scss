@@ -1,0 +1,35 @@
+.l_block {
+    &__title {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 140%;
+        color: #131313;
+        margin-bottom: 40px;
+    }
+    &__menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                a {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    text-decoration: none;
+                    color: #131313;
+                    &:hover {
+                        color: #006FAB;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

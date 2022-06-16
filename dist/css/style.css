@@ -657,10 +657,180 @@ template {
   opacity: 0.75;
 }
 
+.r-tabs .r-tabs-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.r-tabs .r-tabs-tab {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+}
+
+.r-tabs .r-tabs-panel {
+  padding: 15px;
+  display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+  display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+  display: block;
+}
+
+/* Accordion responsive breakpoint */
+
+body {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-size: 12px;
+  background-color: #f9f9f9;
+}
+
+/* Tabs container */
+
+.r-tabs {
+  position: relative;
+  background-color: #00c5ad;
+  border-top: 1px solid #00c5ad;
+  border-right: 1px solid #00c5ad;
+  border-left: 1px solid #00c5ad;
+  border-bottom: 4px solid #00c5ad;
+  border-radius: 4px;
+}
+
+/* Tab element */
+
+.r-tabs .r-tabs-nav .r-tabs-tab {
+  position: relative;
+  background-color: #00c5ad;
+}
+
+/* Tab anchor */
+
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+  display: inline-block;
+  padding: 10px 12px;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Disabled tab */
+
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Active state tab anchor */
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+  color: #00c5ad;
+  text-shadow: none;
+  background-color: white;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Tab panel */
+
+.r-tabs .r-tabs-panel {
+  background-color: white;
+  border-bottom: 4px solid white;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* Accordion anchor */
+
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+  display: block;
+  padding: 10px;
+  background-color: #00c5ad;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Active accordion anchor */
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+  background-color: #fff;
+  color: #00c5ad;
+  text-shadow: none;
+}
+
+/* Disabled accordion button */
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Buttons */
+
+button {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  line-height: 100%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px;
+  background-color: #00c5ad;
+  box-shadow: 0px 3px 0px 0px #00ab94;
+  cursor: pointer;
+}
+
+/* Info bar */
+
+.info {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  width: 300px;
+  line-height: 100%;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  color: #00c5ad;
+  border: 2px solid #00ab94;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "HeliosBlackC";
   font-display: swap;
   src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCompressedC";
+  font-display: swap;
+  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -672,9 +842,9 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
+  font-family: "HeliosCondBlackC";
   font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -683,20 +853,6 @@ template {
   font-display: swap;
   src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
   font-weight: 700;
-}
-
-@font-face {
-  font-family: "HeliosCompressedC";
-  font-display: swap;
-  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCondBlackC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
-  font-weight: 400;
 }
 
 @font-face {
@@ -763,16 +919,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosLightC";
+  font-family: "HeliosThinC";
   font-display: swap;
-  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosThinC";
+  font-family: "HeliosLightC";
   font-display: swap;
-  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
+  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -864,10 +1020,45 @@ textarea {
   background: #006FAB;
 }
 
+.l_block__title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  color: #131313;
+  margin-bottom: 40px;
+}
+
+.l_block__menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.l_block__menu ul li a {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  color: #131313;
+}
+
+.l_block__menu ul li a:hover {
+  color: #006FAB;
+}
+
+.l_block__menu ul li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .header {
   background: #FFFFFF;
   box-shadow: 0px 4px 60px rgba(0, 111, 171, 0.2);
   position: relative;
+  z-index: 30;
   margin-bottom: 64px;
 }
 
@@ -2045,6 +2236,30 @@ textarea {
   background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0412 20.1558L27.7518 25.8652L25.8652 27.7518L20.1558 22.0412C18.0315 23.7441 15.3892 24.6704 12.6665 24.6665C6.0425 24.6665 0.666504 19.2905 0.666504 12.6665C0.666504 6.0425 6.0425 0.666504 12.6665 0.666504C19.2905 0.666504 24.6665 6.0425 24.6665 12.6665C24.6704 15.3892 23.7441 18.0315 22.0412 20.1558ZM19.3665 19.1665C21.0587 17.4264 22.0037 15.0937 21.9998 12.6665C21.9998 7.50917 17.8225 3.33317 12.6665 3.33317C7.50917 3.33317 3.33317 7.50917 3.33317 12.6665C3.33317 17.8225 7.50917 21.9998 12.6665 21.9998C15.0937 22.0037 17.4264 21.0587 19.1665 19.3665L19.3665 19.1665Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
 }
 
+.bottom_module {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_module__l-side {
+  flex: 0 0 360px;
+  margin-right: 15px;
+}
+
+.bottom_module__r-side {
+  width: calc(100% - 375px);
+}
+
+.isTablet .bottom_module__l-side,
+.isMobile .bottom_module__l-side {
+  display: none;
+}
+
+.isTablet .bottom_module__r-side,
+.isMobile .bottom_module__r-side {
+  width: 100%;
+}
+
 .footer {
   display: flex;
   align-items: flex-end;
@@ -2227,6 +2442,16 @@ textarea {
 
   .aside_r {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .r-tabs .r-tabs-nav {
+    display: none;
+  }
+
+  .r-tabs .r-tabs-accordion-title {
+    display: block;
   }
 }
 
