@@ -814,13 +814,6 @@ button {
 }
 
 @font-face {
-  font-family: "HeliosBlackC";
-  font-display: swap;
-  src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosC";
   font-display: swap;
   src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
@@ -828,9 +821,16 @@ button {
 }
 
 @font-face {
-  font-family: "HeliosCompressedC";
+  font-family: "HeliosBlackC";
   font-display: swap;
-  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+  src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -839,6 +839,13 @@ button {
   font-display: swap;
   src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosCompressedC";
+  font-display: swap;
+  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -856,13 +863,6 @@ button {
 }
 
 @font-face {
-  font-family: "HeliosCondC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosCondLightC";
   font-display: swap;
   src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
@@ -877,17 +877,17 @@ button {
 }
 
 @font-face {
-  font-family: "HeliosExtBlackC";
-  font-display: swap;
-  src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosExtC";
   font-display: swap;
   src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosExtBlackC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -919,16 +919,16 @@ button {
 }
 
 @font-face {
-  font-family: "HeliosThinC";
+  font-family: "HeliosLightC";
   font-display: swap;
-  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
+  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosLightC";
+  font-family: "HeliosThinC";
   font-display: swap;
-  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -1018,6 +1018,30 @@ textarea {
 
 *::-webkit-scrollbar-thumb:hover {
   background: #006FAB;
+}
+
+.bottom_module {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_module__l-side {
+  flex: 0 0 360px;
+  margin-right: 15px;
+}
+
+.bottom_module__r-side {
+  width: calc(100% - 375px);
+}
+
+.isTablet .bottom_module__l-side,
+.isMobile .bottom_module__l-side {
+  display: none;
+}
+
+.isTablet .bottom_module__r-side,
+.isMobile .bottom_module__r-side {
+  width: 100%;
 }
 
 .l_block__title {
@@ -2234,30 +2258,6 @@ textarea {
   width: 40px;
   height: 40px;
   background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0412 20.1558L27.7518 25.8652L25.8652 27.7518L20.1558 22.0412C18.0315 23.7441 15.3892 24.6704 12.6665 24.6665C6.0425 24.6665 0.666504 19.2905 0.666504 12.6665C0.666504 6.0425 6.0425 0.666504 12.6665 0.666504C19.2905 0.666504 24.6665 6.0425 24.6665 12.6665C24.6704 15.3892 23.7441 18.0315 22.0412 20.1558ZM19.3665 19.1665C21.0587 17.4264 22.0037 15.0937 21.9998 12.6665C21.9998 7.50917 17.8225 3.33317 12.6665 3.33317C7.50917 3.33317 3.33317 7.50917 3.33317 12.6665C3.33317 17.8225 7.50917 21.9998 12.6665 21.9998C15.0937 22.0037 17.4264 21.0587 19.1665 19.3665L19.3665 19.1665Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
-}
-
-.bottom_module {
-  display: flex;
-  justify-content: space-between;
-}
-
-.bottom_module__l-side {
-  flex: 0 0 360px;
-  margin-right: 15px;
-}
-
-.bottom_module__r-side {
-  width: calc(100% - 375px);
-}
-
-.isTablet .bottom_module__l-side,
-.isMobile .bottom_module__l-side {
-  display: none;
-}
-
-.isTablet .bottom_module__r-side,
-.isMobile .bottom_module__r-side {
-  width: 100%;
 }
 
 .footer {
