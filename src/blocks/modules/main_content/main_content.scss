@@ -2,6 +2,7 @@
     .content {
         display: flex;
         justify-content: space-between;
+        margin-top: 14px;
         @media all and (max-width: 1330px) {
             flex-direction: row-reverse;
         }

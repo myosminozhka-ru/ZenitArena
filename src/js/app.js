@@ -31,6 +31,13 @@ $(function() {
         }
     });
     $(window).trigger('resize');
+
+    $('.news_bl_photos_js').slick({
+        dots: true,
+        arrows: true,
+        infinite: false,
+        variableWidth: true
+    });
     
     // $('#responsiveTabsDemo').responsiveTabs({
     //     startCollapsed: 'accordion'
