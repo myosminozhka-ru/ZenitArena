@@ -7,12 +7,12 @@
     <title>Страница новости</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="inPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         @@include('blocks/modules/header/header.html', {})
         <main class="content center_block">
             @@include('blocks/modules/top_module/top_module.html', {
-                
+                "type" : "backPage",
             })
             <div class="bottom_module">
                 <div class="bottom_module__l-side">

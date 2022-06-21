@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница новости</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220621150631">
+    <link rel="stylesheet" href="css/style.css?_v=20220622031901">
 </head>
-<body>
+<body class="inPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
     <div class="header__in center_block">
@@ -112,9 +112,11 @@
 </header>
         <main class="content center_block">
             <div class="top_module">
-    <div class="top_module__l-side">
-        <a @click.prevent="backPage" class="top_module__back">Назад</a>
-    </div>
+    
+        <div class="top_module__l-side">
+            <a @click.prevent="backPage" class="top_module__back">Назад</a>
+        </div>
+    
     <div class="top_module__r-side">
         <div class="breadcrums">
             <a href="#">Главная</a>
@@ -180,11 +182,6 @@
     <div class="news_bl_video">
         <div class="news_bl_video__title"><span>Видео</span></div>
         <div class="news_bl_video__blocks">
-            <div class="news_bl_video__block">
-                <video controls>
-                    <source src="./files/pv.mp4" type="video/mp4">
-                  </video>
-            </div>
             <div class="news_bl_video__block">
                 <video controls>
                     <source src="./files/pv.mp4" type="video/mp4">
@@ -260,6 +257,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220621150631"></script>
+    <script src="js/app.min.js?_v=20220622031901"></script>
 </body>
 </html>

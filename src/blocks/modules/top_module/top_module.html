@@ -1,7 +1,9 @@
 <div class="top_module">
-    <div class="top_module__l-side">
-        <a @click.prevent="backPage" class="top_module__back">Назад</a>
-    </div>
+    @@if (type === 'backPage') {
+        <div class="top_module__l-side">
+            <a @click.prevent="backPage" class="top_module__back">Назад</a>
+        </div>
+    }
     <div class="top_module__r-side">
         <div class="breadcrums">
             <a href="#">Главная</a>
