@@ -1,0 +1,13 @@
+.adv_block {
+    padding-top: 22px;
+    .news_bl__top {
+        padding-bottom: 18px;
+    }
+}
+.isTablet, .isMobile {
+    .adv_block {
+        .news_bl__top {
+            padding-bottom: 16px;
+        }
+    }
+}

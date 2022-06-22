@@ -1,0 +1,73 @@
+.page_error {
+    height: 100vh;
+    .header {
+        margin-bottom: 0;
+    }
+    .bl_error {
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: url('../img/bg5.jpg') 50% / cover no-repeat;
+        text-align: center;
+        &__title {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 120%;
+            margin-bottom: 20px;
+            color: #00B0DE;
+        }
+        &__text {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #F7F7F7;
+            margin-bottom: 40px;
+        }
+        &__links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__link {
+            margin-left: 8px;
+            margin-right: 8px;
+            display: inline-block;
+            text-decoration: none;
+            padding: 16px 32px;
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            transition: all .3s ease-out;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            text-align: center;
+            &:first-child {
+                color: #F7F7F7;
+                background: #006FAB;
+                &:hover {
+                    border-color: #006FAB;
+                    color: #006FAB;
+                    background: #F7F7F7;
+                }
+            }
+            &:last-child {
+                color: #006FAB;
+                background: #FFFFFF;
+                &:hover {
+                    border-color: #FFFFFF;
+                    color: #FFFFFF;
+                    background: #006FAB;
+                }
+            }
+        }
+    }
+}

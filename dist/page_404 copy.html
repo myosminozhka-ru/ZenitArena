@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница события</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220622154857">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20220622153800">
 </head>
-<body class="inPage">
+<body class="page_error">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
     <div class="header__in center_block">
@@ -110,114 +110,15 @@
         </div>
     </div>
 </header>
-        <main class="content center_block">
-            <div class="top_module">
-    
-        <div class="top_module__l-side">
-            <a @click.prevent="backPage" class="top_module__back">Назад</a>
-        </div>
-    
-    <div class="top_module__r-side">
-        <div class="breadcrums">
-            <a href="#">Главная</a>
-            <span class="breadcrums__splash"></span>
-            <a href="#">Информация</a>
-            <span class="breadcrums__splash"></span>
-            <span>Новости администрации</span>
-        </div>
-        <form class="search_block">
-            <input type="text" placeholder="Поиск по разделу">
-            <input type="submit" value="Поиск">
-        </form>
+        <main class="content">
+            <div class="bl_error">
+    <div class="bl_error__title">404</div>
+    <div class="bl_error__text">Текущая страница удалена или не существует</div>
+    <div class="bl_error__links">
+         <a href="#" class="bl_error__link">Главная</a>
+         <a href="" class="bl_error__link">Назад</a>
     </div>
 </div>
-            <div class="bottom_module">
-                <div class="bottom_module__l-side">
-                    <div class="l_block">
-    <div class="l_block__title">Информация</div>
-    <nav class="l_block__menu">
-        <ul>
-            <li><a href="#">Новости администрации</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Объявления</a></li>
-            <li><a href="#">События</a></li>
-        </ul>
-    </nav>
-</div>
-                </div>
-                <div class="bottom_module__r-side">
-                    <div class="news_bl event_bl">
-    <div class="event_bl__top">
-        <div class="event_bl__l-side">
-            <div class="event_bl__number">31</div>
-            <div class="event_bl__info">
-                <div class="event_bl__time">Сб, 16:30</div>
-                <div class="event_bl__mouth">июня</div>
-            </div>
-        </div>
-        <div class="event_bl__r-side">
-            <div class="event_bl__text">Место проведения: Газпром Арена </div>
-            <div class="event_bl__text">Дата и время завершения: 14.07.2022 (Суббота), 18:50</div>
-        </div>
-    </div>
-    <div class="red_bl">
-        <div class="red_bl__l-side">
-            <picture><source srcset="./img/s3.webp" type="image/webp"><img src="./img/s3.jpg" alt=""></picture>
-        </div>
-        <div class="red_bl__r-side">
-            <h1 class="red_bl__title">В рамках турнира Российской Премьер-Лиги состоится матч между футбольными командами «Зенит – Химки»</h1>
-            <div class="red_bl__text">Приобрести билеты на матч «Зенит-Химки» вы можете на нашем сайте, заполнив заявку. После обработки заказа и оплаты, ваши билеты будут высланы на указанную почту.</div>
-        </div>
-    </div>
-    <div class="event_options">
-        <div class="event_options__title">Дополнительная информация</div>
-        <div class="event_options__blocks">
-            <div class="event_options__block">
-                <div class="event_options__tit">Дата и время начала </div>
-                <div class="event_options__txt">14.07.2022 (Суббота), 16:30 </div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Дата конца</div>
-                <div class="event_options__txt">14.07.2022 (Суббота), 18:50 </div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Количество зрителей - ожидаемое</div>
-                <div class="event_options__txt">50 000</div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Количество зрителей - официальное</div>
-                <div class="event_options__txt">45 000</div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Количество волонтеров - ожидаемое</div>
-                <div class="event_options__txt">1 000 </div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Количество волонтеров - фактическое</div>
-                <div class="event_options__txt">800</div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Персонал - количество единиц</div>
-                <div class="event_options__txt">100</div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">ЧОП - количество единиц</div>
-                <div class="event_options__txt">1000</div>
-            </div>
-            <div class="event_options__block">
-                <div class="event_options__tit">Транспорт - количество единиц</div>
-                <div class="event_options__txt">1000</div>
-            </div>
-        </div>
-    </div>
-    <div class="red_bl__txt">
-        <p>В рамках турнира Российской Премьер-Лиги на игровом поле «Газпром Арена» в Санкт-Петербурге состоится матч между футбольными командами «Зенит – Химки».</p>
-        <p>Футбольная команда «Зенит» является символом и гордостью Санкт-Петербурга. Первая команда была основана ещё в 1925-м году из рабочих ленинградского завода металлов. Длинная футбольная карьера и большое количество трофеев делает ее одной из самых популярных футбольных команд в России. Игроки «Зенита» являются восьмикратными обладателями Кубка чемпионов России. Команда выигрывала множество национальных Кубков, является семикратным обладателем Суперкубка России. А также прославилась победными матчами за Кубок УЕФА и Суперкубок УЕФА в 2008-м году. Главный тренер команды в настоящее время Сергей Семак.</p>
-    </div>
-    <div class="news_bl_admin__flag">Игры</div>
-</div>
-                </div>
-            </div>
         </main>
         <footer class="footer center_block">
     <a href="#" class="footer__logo"><img src="./img/svg/logo.svg" alt=""></a>
@@ -253,6 +154,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220622154857"></script>
+    <script src="js/app.min.js?_v=20220622153800"></script>
 </body>
 </html>

@@ -10,7 +10,10 @@
         padding: 0px 20px;
         background: #F7FAFB;
         margin-top: 16px;
-        padding-bottom: 11px;
+        padding-right: 0;
+        margin-right: -28px;
+        width: calc(100% + 28px);
+        padding-right: 28px;
     }
     &__l-side {
         display: flex;
@@ -26,6 +29,26 @@
         color: #131313;
         margin-right: 8px;
     }
+    &__info {
+        padding-top: 10px;
+    }
+    &__time {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #131313;
+    }
+    &__mouth { 
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 140%;
+        color: #131313;
+    }
     &__r-side {
         font-family: 'HeliosC', serif;
         font-style: normal;
@@ -35,6 +58,7 @@
         text-align: right;
         letter-spacing: 0.01em;
         color: #9797A5;
+        padding-bottom: 11px;
     }
     .news_bl_admin__flag {
         width: max-content;
@@ -78,5 +102,68 @@
         font-size: 18px;
         line-height: 150%;
         color: #9797A5;
+    }
+}
+.isTablet, .isMobile {
+    .event_bl {
+        &__r-side {
+            display: none;
+        }
+        &__top {
+            padding: 8px 16px;
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        &__number {
+            font-size: 45px;
+            margin-right: 6px;
+        }
+        &__info {
+            padding-top: 0;
+        }
+        &__time {
+            font-size: 12px;
+        }
+        &__mouth {
+            font-size: 24px;
+        }
+        .red_bl {
+            margin-bottom: 32px;
+        }
+    }
+    .event_options {
+        &__title {
+            margin-left: -20px;
+            margin-right: -20px;
+            width: calc(100% + 40px);
+            font-size: 18px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__block {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+        &__tit {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #9797A5;
+            line-height: 140%;
+        }
+        &__txt {
+            font-size: 16px;
+            color: #131313;
+            line-height: 145%;
+        }
+        &__blocks {
+            margin-bottom: 32px;
+        }
+        .news_bl_admin__flag {
+            margin-top: 32px;
+            margin-bottom: 18px;
+        }
     }
 }
