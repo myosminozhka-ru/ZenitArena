@@ -1,20 +1,26 @@
 @font-face {
-	font-family: "HeliosC";
-	font-display: swap;
-	src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-	font-weight: 700;
-}
-@font-face {
 	font-family: "HeliosBlackC";
 	font-display: swap;
 	src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
 	font-weight: 400;
 }
 @font-face {
-	font-family: "HeliosCondC";
+	font-family: "HeliosC";
 	font-display: swap;
-	src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
+	src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
 	font-weight: 700;
+}
+@font-face {
+	font-family: "HeliosC";
+	font-display: swap;
+	src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "HeliosCompressedC";
+	font-display: swap;
+	src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+	font-weight: 400;
 }
 @font-face {
 	font-family: "HeliosCondBlackC";
@@ -23,10 +29,10 @@
 	font-weight: 400;
 }
 @font-face {
-	font-family: "HeliosCompressedC";
+	font-family: "HeliosCondC";
 	font-display: swap;
-	src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-	font-weight: 400;
+	src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
+	font-weight: 700;
 }
 @font-face {
 	font-family: "HeliosCondC";
@@ -53,21 +59,15 @@
 	font-weight: 400;
 }
 @font-face {
-	font-family: "HeliosC";
-	font-display: swap;
-	src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-	font-weight: 400;
-}
-@font-face {
 	font-family: "HeliosExtC";
 	font-display: swap;
 	src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
 	font-weight: 700;
 }
 @font-face {
-	font-family: "HeliosExtLightC";
+	font-family: "HeliosExtC";
 	font-display: swap;
-	src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
+	src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
 	font-weight: 400;
 }
 @font-face {
@@ -77,21 +77,21 @@
 	font-weight: 400;
 }
 @font-face {
-	font-family: "HeliosExtC";
+	font-family: "HeliosExtLightC";
 	font-display: swap;
-	src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "HeliosLightC";
-	font-display: swap;
-	src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+	src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
 	font-weight: 400;
 }
 @font-face {
 	font-family: "HeliosExtThinC";
 	font-display: swap;
 	src: url("../fonts/HeliosExtThinC.woff2") format("woff2"), url("../fonts/HeliosExtThinC.woff") format("woff"), url("../fonts/HeliosExtThinC.ttf") format("ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "HeliosLightC";
+	font-display: swap;
+	src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
 	font-weight: 400;
 }
 @font-face {

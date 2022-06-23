@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220622154857">
+    <link rel="stylesheet" href="css/style.css?_v=20220623170502">
 </head>
-<body>
+<body class="page_error">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
     <div class="header__in center_block">
@@ -112,7 +112,28 @@
 </header>
         <main class="content">
             <div class="auth_block">
-    
+    <div class="auth_block__l-side">
+        <picture><source srcset="./img/bg6.webp" type="image/webp"><img src="./img/bg6.jpg" alt=""></picture>
+    </div>
+    <div class="auth_block__r-side">
+        <div class="auth_block__in">
+            <h1 class="auth_block__title">Авторизация</h1>
+            <form action="" class="auth_block__form">
+                <div class="auth_block__tit">Подтвердите, что это ваш аккаунт и введите пароль</div>
+                <input type="password" placeholder="Введите пароль">
+                <div class="checkbox">
+                    <label class="custom-checkbox" id="c1">
+                      <input type="checkbox" id="c1" value="Запомнить меня на этом компьютере">
+                      <span>Запомнить меня на этом компьютере</span>
+                    </label>
+                </div>
+                <div class="auth_block__buttons">
+                    <button class="auth_block__button" type="submit">Далее</button>
+                    <a href="#" class="auth_block__button">Забыли пароль</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
         </main>
         <footer class="footer center_block">
@@ -135,20 +156,7 @@
         <div class="footer__copy">© 2003–2022 ПАО «Газпром»</div>
     </div>
 </footer>
-        <div class="modal" data-modal="1">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 1
     </div>
-</div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
-    </div>
-</div>
-    </div>
-    <script src="js/app.min.js?_v=20220622154857"></script>
+    <script src="js/app.min.js?_v=20220623170502"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ import 'slick-carousel';
 // import 'responsive-tabs';
 
 import MainHeader from '../blocks/modules/header/header.js';
-import Modals from '../blocks/modules/modals/modals.js';
+// import Modals from '../blocks/modules/modals/modals.js';
 
 $(function() {
 
@@ -80,11 +80,11 @@ window.app = new Vue({
         mainHeader: new MainHeader({
             isMobileMenuOpened: false,
         }),
-        modals: new Modals({
-            modalsSelector: "data-modal",
-            modalsOpenerSelector: "data-modal-id",
-            openedClass: "isOpened"
-        })
+        // modals: new Modals({
+        //     modalsSelector: "data-modal",
+        //     modalsOpenerSelector: "data-modal-id",
+        //     openedClass: "isOpened"
+        // })
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
@@ -96,7 +96,7 @@ window.app = new Vue({
     },
     beforeMount() {
         this.isMounted = true;
-        this.modals.init();
+        // this.modals.init();
     },
     computed: {
         isMobile: function () {
