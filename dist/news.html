@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220623170502">
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css?_v=20220624104656">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <header class="header">
+        <div class="owf_block" :class="{'isActive': mainHeader.isUserOpened}"></div>
+<header class="header" :class="{'isActive': mainHeader.isUserOpened}">
     <div class="header__in center_block">
+        <a href="#" class="header__logo_m"><img src="./img/svg/logo_mob.svg" alt=""></a>
         <div class="burger">
             <div class="burger__icon" :class="{'isActive': mainHeader.isMobileMenuOpened}"></div>
             <div class="burger__body" :class="{'isActive': mainHeader.isMobileMenuOpened}">
@@ -97,12 +100,15 @@
             </div>
         </div>
         <a href="#" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
-        <div class="user_h">
+        <div class="user_h" :class="{'isActive': mainHeader.isUserOpened}">
             <div class="user_h__icon">
                 <div class="user_h__name">Иван Иванов</div>
                 <div class="user_h__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt=""></picture></div>
             </div>
-            <div class="user_h__body"></div>
+            <div class="user_h__body">
+                <a href="#" class="user_h__link">Личный кабинет</a>
+                <a href="#" class="user_h__link">Выйти</a>
+            </div>
         </div>
         <div class="alert_h">
             <div class="alert_h__icon"></div>
@@ -179,6 +185,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220623170502"></script>
+    <script src="js/app.min.js?_v=20220624104656"></script>
 </body>
 </html>
