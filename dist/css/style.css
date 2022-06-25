@@ -390,7 +390,6 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
@@ -776,20 +775,6 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
@@ -804,10 +789,24 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: "HeliosCondC";
   font-display: swap;
   src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -853,16 +852,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosExtraCompressedC";
+  font-family: "HeliosExtLightC";
   font-display: swap;
-  src: url("../fonts/HeliosExtraCompressedC.woff2") format("woff2"), url("../fonts/HeliosExtraCompressedC.woff") format("woff"), url("../fonts/HeliosExtraCompressedC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosExtLightC";
+  font-family: "HeliosExtraCompressedC";
   font-display: swap;
-  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtraCompressedC.woff2") format("woff2"), url("../fonts/HeliosExtraCompressedC.woff") format("woff"), url("../fonts/HeliosExtraCompressedC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -881,16 +880,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosThinC";
+  font-family: "HeliosUltraCompressedC";
   font-display: swap;
-  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
+  src: url("../fonts/HeliosUltraCompressedC.woff2") format("woff2"), url("../fonts/HeliosUltraCompressedC.woff") format("woff"), url("../fonts/HeliosUltraCompressedC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosUltraCompressedC";
+  font-family: "HeliosThinC";
   font-display: swap;
-  src: url("../fonts/HeliosUltraCompressedC.woff2") format("woff2"), url("../fonts/HeliosUltraCompressedC.woff") format("woff"), url("../fonts/HeliosUltraCompressedC.ttf") format("ttf");
+  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -2204,10 +2203,6 @@ textarea {
   color: #B6B6C6;
 }
 
-.top_module .search_block input[type=text]:-ms-input-placeholder {
-  color: #B6B6C6;
-}
-
 .top_module .search_block input[type=text]::placeholder {
   color: #B6B6C6;
 }
@@ -3451,7 +3446,7 @@ textarea {
 .auth_block {
   display: flex;
   justify-content: space-between;
-  /* для элемента input c type="checkbox" */
+  height: 100%;
 }
 
 .auth_block .checkbox .custom-checkbox {
@@ -3477,7 +3472,6 @@ textarea {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   font-family: "HeliosC", serif;
   font-style: normal;
@@ -3515,6 +3509,7 @@ textarea {
   align-items: center;
   justify-content: center;
   padding-right: 70px;
+  padding-left: 40px;
 }
 
 .auth_block__in {
@@ -3570,10 +3565,6 @@ textarea {
 }
 
 .auth_block__form input[type=password]::-moz-placeholder {
-  letter-spacing: normal;
-}
-
-.auth_block__form input[type=password]:-ms-input-placeholder {
   letter-spacing: normal;
 }
 
@@ -3633,6 +3624,16 @@ textarea {
 .auth_block__button:hover:nth-child(2) {
   background: #006FAB;
   color: #fff;
+}
+
+.isTablet .auth_block__l-side,
+.isMobile .auth_block__l-side {
+  display: none;
+}
+
+.isTablet .auth_block__r-side,
+.isMobile .auth_block__r-side {
+  padding: 20px;
 }
 
 .footer {
@@ -3800,6 +3801,16 @@ textarea {
   max-width: 320px;
   padding: 1.0416666667vw;
   background: #fff;
+}
+
+@media all and (min-width: 1023px) {
+  .auth_page {
+    height: 100vh;
+  }
+
+  .auth_page .header {
+    margin-bottom: 0;
+  }
 }
 
 @media all and (max-width: 1330px) {

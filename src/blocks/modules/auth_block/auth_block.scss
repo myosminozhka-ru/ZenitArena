@@ -1,7 +1,15 @@
+@media all and (min-width: 1023px) {
+    .auth_page {
+        height: 100vh;
+        .header {
+            margin-bottom: 0;
+        }
+    }
+}
 .auth_block {
     display: flex;
     justify-content: space-between;
-    /* для элемента input c type="checkbox" */
+    height: 100%;
     .checkbox {
         .custom-checkbox {
             cursor: pointer;
@@ -65,6 +73,7 @@
         align-items: center;
         justify-content: center;
         padding-right: 70px;
+        padding-left: 40px;
     }
     &__in {
         max-width: 490px;
@@ -159,6 +168,16 @@
                 background: #006FAB;
                 color: #fff;
             }
+        }
+    }
+}
+.isTablet, .isMobile {
+    .auth_block {
+        &__l-side {
+            display: none;
+        }
+        &__r-side {
+            padding: 20px;
         }
     }
 }
