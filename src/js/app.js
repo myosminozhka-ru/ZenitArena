@@ -78,6 +78,7 @@ window.app = new Vue({
             window: window.innerWidth
         },
         mainHeader: new MainHeader({
+            isUserOpened: false,
             isMobileMenuOpened: false,
         }),
         // modals: new Modals({
