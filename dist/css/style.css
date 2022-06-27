@@ -390,7 +390,6 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
@@ -769,13 +768,6 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosBlackC";
-  font-display: swap;
-  src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosC";
   font-display: swap;
   src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
@@ -783,37 +775,9 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
+  font-family: "HeliosBlackC";
   font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCompressedC";
-  font-display: swap;
-  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCondBlackC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCondC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCondLightC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosBlackC.woff2") format("woff2"), url("../fonts/HeliosBlackC.woff") format("woff"), url("../fonts/HeliosBlackC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -825,9 +789,23 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosExtBlackC";
+  font-family: "HeliosCompressedC";
   font-display: swap;
-  src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
+  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondBlackC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -839,6 +817,27 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondLightC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosExtBlackC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "HeliosExtC";
   font-display: swap;
   src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
@@ -846,16 +845,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosExtLightC";
+  font-family: "HeliosExtC";
   font-display: swap;
-  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosExtC";
+  font-family: "HeliosExtLightC";
   font-display: swap;
-  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -2382,10 +2381,6 @@ textarea {
   color: #B6B6C6;
 }
 
-.top_module .search_block input[type=text]:-ms-input-placeholder {
-  color: #B6B6C6;
-}
-
 .top_module .search_block input[type=text]::placeholder {
   color: #B6B6C6;
 }
@@ -3680,7 +3675,6 @@ textarea {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   font-family: "HeliosC", serif;
   font-style: normal;
@@ -3774,10 +3768,6 @@ textarea {
 }
 
 .auth_block__form input[type=password]::-moz-placeholder {
-  letter-spacing: normal;
-}
-
-.auth_block__form input[type=password]:-ms-input-placeholder {
   letter-spacing: normal;
 }
 
@@ -4345,9 +4335,13 @@ textarea {
   color: #131313;
 }
 
+.birth_bl__hide_bl {
+  display: none;
+}
+
 .isTablet .birth_bl__top,
 .isMobile .birth_bl__top {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
 .isTablet .birth_bl__block,
@@ -4356,24 +4350,39 @@ textarea {
   background: none;
   border-radius: 0;
   padding: 0;
+  margin: 0;
 }
 
 .isTablet .birth_bl__l-side,
 .isMobile .birth_bl__l-side {
+  display: none;
+}
+
+.isTablet .birth_bl__hide_bl,
+.isMobile .birth_bl__hide_bl {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #131313;
+  display: block;
   text-align: center;
   margin-right: 0;
-  width: 100%;
-  flex: none;
   margin-bottom: 8px;
-  font-size: 18px;
+  margin-top: 12px;
 }
 
 .isTablet .birth_bl__r-side,
 .isMobile .birth_bl__r-side {
+  width: 100%;
+}
+
+.isTablet .birth_bl__item,
+.isMobile .birth_bl__item {
   padding: 16px;
   background: #FFFFFF;
   border-radius: 10px;
-  width: 100%;
 }
 
 .isTablet .birth_bl__name,
@@ -4396,6 +4405,279 @@ textarea {
 .isTablet .birth_bl__subtit,
 .isMobile .birth_bl__subtit {
   font-size: 16px;
+}
+
+.vacan-m_bl__blocks {
+  margin-bottom: 32px;
+}
+
+.vacan-m_bl__block {
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+.vacan-m_bl__block:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.vacan-m_bl__date {
+  background: #00B0DE url("data:image/svg+xml,%3Csvg width='79' height='45' viewBox='0 0 79 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.8999 38.5715L7.8999 45L15.7999 45L15.7999 38.5715L7.8999 38.5715Z' fill='%231878BE'/%3E%3Cpath d='M7.8999 32.1427L7.8999 38.5713L15.7999 38.5713L15.7999 32.1427L7.8999 32.1427Z' fill='%231878BE'/%3E%3Cpath d='M7.8999 19.2854L7.8999 25.7139L15.7999 25.7139L15.7999 19.2854L7.8999 19.2854Z' fill='%231878BE'/%3E%3Cpath d='M7.8999 0.000101089L7.8999 6.42871L15.7999 6.42871L15.7999 0.000100656L7.8999 0.000101089Z' fill='%2300B0DE'/%3E%3Cpath d='M7.8999 12.8575L7.8999 19.2861L15.7999 19.2861L15.7999 12.8575L7.8999 12.8575Z' fill='%231878BE'/%3E%3Cpath d='M7.8999 6.42897L7.8999 12.8574L15.7999 12.8574L15.7999 6.42897L7.8999 6.42897Z' fill='%231878BE'/%3E%3Cpath d='M7.8999 25.714L7.8999 32.1426L15.7999 32.1426L15.7999 25.714L7.8999 25.714Z' fill='%232D4E9E'/%3E%3Cpath d='M15.7998 38.5715L15.7998 45L23.6999 45L23.6999 38.5715L15.7998 38.5715Z' fill='%231878BE'/%3E%3Cpath d='M15.7998 32.1427L15.7998 38.5713L23.6999 38.5713L23.6999 32.1427L15.7998 32.1427Z' fill='%2300B0DE'/%3E%3Cpath d='M15.7998 19.2854L15.7998 25.7139L23.6999 25.7139L23.6999 19.2854L15.7998 19.2854Z' fill='%232D4E9E'/%3E%3Cpath d='M15.7998 0.000101089L15.7998 6.42871L23.6999 6.42871L23.6999 0.000100656L15.7998 0.000101089Z' fill='%231878BE'/%3E%3Cpath d='M15.7998 12.8575L15.7998 19.2861L23.6999 19.2861L23.6999 12.8575L15.7998 12.8575Z' fill='%2300B0DE'/%3E%3Cpath d='M15.7998 6.42897L15.7998 12.8574L23.6999 12.8574L23.6999 6.42897L15.7998 6.42897Z' fill='%231878BE'/%3E%3Cpath d='M15.7998 25.714L15.7998 32.1426L23.6999 32.1426L23.6999 25.714L15.7998 25.714Z' fill='%231878BE'/%3E%3Cpath d='M23.7002 38.5715L23.7002 45L31.6003 45L31.6003 38.5715L23.7002 38.5715Z' fill='%2300B0DE'/%3E%3Cpath d='M23.7002 32.1427L23.7002 38.5713L31.6003 38.5713L31.6003 32.1427L23.7002 32.1427Z' fill='%231878BE'/%3E%3Cpath d='M23.7002 19.2854L23.7002 25.7139L31.6003 25.7139L31.6003 19.2854L23.7002 19.2854Z' fill='%2300B0DE'/%3E%3Cpath d='M23.7002 0.000101089L23.7002 6.42871L31.6003 6.42871L31.6003 0.000100656L23.7002 0.000101089Z' fill='%2300B0DE'/%3E%3Cpath d='M23.7002 12.8575L23.7002 19.2861L31.6003 19.2861L31.6003 12.8575L23.7002 12.8575Z' fill='%231878BE'/%3E%3Cpath d='M23.7002 6.42897L23.7002 12.8574L31.6003 12.8574L31.6003 6.42897L23.7002 6.42897Z' fill='%231878BE'/%3E%3Cpath d='M23.7002 25.714L23.7002 32.1426L31.6003 32.1426L31.6003 25.714L23.7002 25.714Z' fill='%232D4E9E'/%3E%3Cpath d='M-2.80739e-07 38.5715L0 45L7.9001 45L7.9001 38.5715L-2.80739e-07 38.5715Z' fill='%2300B0DE'/%3E%3Cpath d='M-2.80746e-07 32.1427L0 38.5713L7.9001 38.5713L7.9001 32.1427L-2.80746e-07 32.1427Z' fill='%2300B0DE'/%3E%3Cpath d='M-2.80739e-07 19.2854L0 25.7139L7.9001 25.7139L7.9001 19.2854L-2.80739e-07 19.2854Z' fill='%2300B0DE'/%3E%3Cpath d='M-2.80746e-07 0.000101089L0 6.42871L7.9001 6.42871L7.9001 0.000100744L-2.80746e-07 0.000101089Z' fill='%2300B0DE'/%3E%3Cpath d='M-2.80746e-07 12.8575L0 19.2861L7.9001 19.2861L7.9001 12.8575L-2.80746e-07 12.8575Z' fill='%231878BE'/%3E%3Cpath d='M-2.80739e-07 6.42897L0 12.8574L7.9001 12.8574L7.9001 6.42897L-2.80739e-07 6.42897Z' fill='%2300B0DE'/%3E%3Cpath d='M-2.80746e-07 25.714L0 32.1426L7.9001 32.1426L7.9001 25.714L-2.80746e-07 25.714Z' fill='%231878BE'/%3E%3Cpath d='M31.6001 38.5715L31.6001 45L39.5001 45L39.5001 38.5715L31.6001 38.5715Z' fill='%231878BE'/%3E%3Cpath d='M31.6001 32.1427L31.6001 38.5713L39.5001 38.5713L39.5001 32.1427L31.6001 32.1427Z' fill='%232D4E9E'/%3E%3Cpath d='M31.6001 19.2854L31.6001 25.7139L39.5001 25.7139L39.5001 19.2854L31.6001 19.2854Z' fill='%231878BE'/%3E%3Cpath d='M31.6001 0.000101089L31.6001 6.42871L39.5001 6.42871L39.5001 0.000100656L31.6001 0.000101089Z' fill='%231878BE'/%3E%3Cpath d='M31.6001 12.8575L31.6001 19.2861L39.5001 19.2861L39.5001 12.8575L31.6001 12.8575Z' fill='%232D4E9E'/%3E%3Cpath d='M31.6001 6.42897L31.6001 12.8574L39.5001 12.8574L39.5001 6.42897L31.6001 6.42897Z' fill='%2300B0DE'/%3E%3Cpath d='M31.6001 25.714L31.6001 32.1426L39.5001 32.1426L39.5001 25.714L31.6001 25.714Z' fill='%2300B0DE'/%3E%3Cpath d='M39.5 38.5715L39.5 45L47.4001 45L47.4001 38.5715L39.5 38.5715Z' fill='%232D4E9E'/%3E%3Cpath d='M39.5 32.1427L39.5 38.5713L47.4001 38.5713L47.4001 32.1427L39.5 32.1427Z' fill='%231878BE'/%3E%3Cpath d='M39.5 19.2854L39.5 25.7139L47.4001 25.7139L47.4001 19.2854L39.5 19.2854Z' fill='%231878BE'/%3E%3Cpath d='M39.5 0.000101089L39.5 6.42871L47.4001 6.42871L47.4001 0.000100656L39.5 0.000101089Z' fill='%2300B0DE'/%3E%3Cpath d='M39.5 12.8575L39.5 19.2861L47.4001 19.2861L47.4001 12.8575L39.5 12.8575Z' fill='%231878BE'/%3E%3Cpath d='M39.5 6.42897L39.5 12.8574L47.4001 12.8574L47.4001 6.42897L39.5 6.42897Z' fill='%232D4E9E'/%3E%3Cpath d='M39.5 25.714L39.5 32.1426L47.4001 32.1426L47.4001 25.714L39.5 25.714Z' fill='%232D4E9E'/%3E%3Cpath d='M47.3999 38.5715L47.3999 45L55.3 45L55.3 38.5715L47.3999 38.5715Z' fill='%231878BE'/%3E%3Cpath d='M47.3999 32.1427L47.3999 38.5713L55.3 38.5713L55.3 32.1427L47.3999 32.1427Z' fill='%232D4E9E'/%3E%3Cpath d='M47.3999 19.2854L47.3999 25.7139L55.3 25.7139L55.3 19.2854L47.3999 19.2854Z' fill='%231B326D'/%3E%3Cpath d='M47.3999 0.000101089L47.3999 6.42871L55.3 6.42871L55.3 0.000100656L47.3999 0.000101089Z' fill='%232D4E9E'/%3E%3Cpath d='M47.3999 12.8575L47.3999 19.2861L55.3 19.2861L55.3 12.8575L47.3999 12.8575Z' fill='%232D4E9E'/%3E%3Cpath d='M47.3999 6.42897L47.3999 12.8574L55.3 12.8574L55.3 6.42897L47.3999 6.42897Z' fill='%231878BE'/%3E%3Cpath d='M47.3999 25.714L47.3999 32.1426L55.3 32.1426L55.3 25.714L47.3999 25.714Z' fill='%231878BE'/%3E%3Cpath d='M55.2998 38.5715L55.2998 45L63.1999 45L63.1999 38.5715L55.2998 38.5715Z' fill='%232D4E9E'/%3E%3Cpath d='M55.2998 32.1427L55.2998 38.5713L63.1999 38.5713L63.1999 32.1427L55.2998 32.1427Z' fill='%231878BE'/%3E%3Cpath d='M55.2998 19.2854L55.2998 25.7139L63.1999 25.7139L63.1999 19.2854L55.2998 19.2854Z' fill='%232D4E9E'/%3E%3Cpath d='M55.2998 0.000101089L55.2998 6.42871L63.1999 6.42871L63.1999 0.000100656L55.2998 0.000101089Z' fill='%231B326D'/%3E%3Cpath d='M55.2998 12.8575L55.2998 19.2861L63.1999 19.2861L63.1999 12.8575L55.2998 12.8575Z' fill='%231878BE'/%3E%3Cpath d='M55.2998 6.42897L55.2998 12.8574L63.1999 12.8574L63.1999 6.42897L55.2998 6.42897Z' fill='%232D4E9E'/%3E%3Cpath d='M55.2998 25.714L55.2998 32.1426L63.1999 32.1426L63.1999 25.714L55.2998 25.714Z' fill='%232D4E9E'/%3E%3Cpath d='M63.1997 38.5715L63.1997 45L71.0997 45L71.0997 38.5715L63.1997 38.5715Z' fill='%232D4E9E'/%3E%3Cpath d='M63.1997 32.1427L63.1997 38.5713L71.0997 38.5713L71.0997 32.1427L63.1997 32.1427Z' fill='%232D4E9E'/%3E%3Cpath d='M63.1997 19.2854L63.1997 25.7139L71.0997 25.7139L71.0997 19.2854L63.1997 19.2854Z' fill='%231B326D'/%3E%3Cpath d='M63.1997 0.000101089L63.1997 6.42871L71.0997 6.42871L71.0997 0.000100656L63.1997 0.000101089Z' fill='%232D4E9E'/%3E%3Cpath d='M63.1997 12.8575L63.1997 19.2861L71.0997 19.2861L71.0997 12.8575L63.1997 12.8575Z' fill='%232D4E9E'/%3E%3Cpath d='M63.1997 6.42897L63.1997 12.8574L71.0997 12.8574L71.0997 6.42897L63.1997 6.42897Z' fill='%231B326D'/%3E%3Cpath d='M63.1997 25.714L63.1997 32.1426L71.0997 32.1426L71.0997 25.714L63.1997 25.714Z' fill='%232D4E9E'/%3E%3Cpath d='M71.1001 38.5715L71.1001 45L79.0002 45L79.0002 38.5715L71.1001 38.5715Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 32.1427L71.1001 38.5713L79.0002 38.5713L79.0002 32.1427L71.1001 32.1427Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 19.2854L71.1001 25.7139L79.0002 25.7139L79.0002 19.2854L71.1001 19.2854Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 0.000101089L71.1001 6.42871L79.0002 6.42871L79.0002 0.000100656L71.1001 0.000101089Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 12.8575L71.1001 19.2861L79.0002 19.2861L79.0002 12.8575L71.1001 12.8575Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 6.42897L71.1001 12.8574L79.0002 12.8574L79.0002 6.42897L71.1001 6.42897Z' fill='%231B326D'/%3E%3Cpath d='M71.1001 25.714L71.1001 32.1426L79.0002 32.1426L79.0002 25.714L71.1001 25.714Z' fill='%231B326D'/%3E%3C/svg%3E%0A") 100% 50% no-repeat;
+  padding: 14px 28px;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #F7F7F7;
+}
+
+.vacan-m_bl__bottom {
+  padding: 28px;
+}
+
+.vacan-m_bl__title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #131313;
+}
+
+.vacan-m_bl__info {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.vacan-m_bl__price {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #131313;
+  margin-right: 64px;
+}
+
+.vacan-m_bl__work {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #9797A5;
+}
+
+.isTablet .vacan-m_bl__date,
+.isMobile .vacan-m_bl__date {
+  padding: 14px 20px;
+}
+
+.isTablet .vacan-m_bl__bottom,
+.isMobile .vacan-m_bl__bottom {
+  padding: 20px;
+}
+
+.isTablet .vacan-m_bl__title,
+.isMobile .vacan-m_bl__title {
+  font-size: 18px;
+}
+
+.isTablet .vacan-m_bl__info,
+.isMobile .vacan-m_bl__info {
+  margin-top: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.isTablet .vacan-m_bl__price,
+.isMobile .vacan-m_bl__price {
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+
+.ad_main_bl__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.ad_main_bl__button {
+  border: 0;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F7F7F7;
+  transition: all 0.3s ease-out;
+  margin-right: 10px;
+  padding: 4px 12px;
+  background: #B6B6C6;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ad_main_bl__button:hover {
+  background: #00B0DE;
+}
+
+.ad_main_bl__button.isActive {
+  background: #00B0DE;
+}
+
+.ad_main_bl__blocks {
+  margin-bottom: 32px;
+}
+
+.ad_main_bl__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 28px;
+  text-decoration: none;
+}
+
+.ad_main_bl__block:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.ad_main_bl__l-side {
+  flex: 0 0 300px;
+  margin-right: 24px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.ad_main_bl__l-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ad_main_bl__r-side {
+  width: 100%;
+}
+
+.ad_main_bl__date {
+  margin-bottom: 17px;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #9797A5;
+}
+
+.ad_main_bl__title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #131313;
+  margin-bottom: 8px;
+}
+
+.ad_main_bl__text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #131313;
+}
+
+.isTablet .ad_main_bl__top,
+.isMobile .ad_main_bl__top {
+  margin-bottom: 16px;
+}
+
+.isTablet .ad_main_bl__block,
+.isMobile .ad_main_bl__block {
+  flex-direction: column;
+  padding: 16px;
+}
+
+.isTablet .ad_main_bl__l-side,
+.isMobile .ad_main_bl__l-side {
+  margin-right: 0;
+  flex: none;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.isTablet .ad_main_bl__date,
+.isMobile .ad_main_bl__date {
+  margin-bottom: 6px;
+}
+
+.isTablet .ad_main_bl__title,
+.isMobile .ad_main_bl__title {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.isTablet .ad_main_bl__text,
+.isMobile .ad_main_bl__text {
+  display: none;
+}
+
+.event_bl_m__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.event_bl_m__button {
+  border: 0;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F7F7F7;
+  transition: all 0.3s ease-out;
+  margin-right: 10px;
+  padding: 4px 12px;
+  background: #B6B6C6;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.event_bl_m__button:hover {
+  background: #00B0DE;
+}
+
+.event_bl_m__button.isActive {
+  background: #00B0DE;
+}
+
+.event_bl_m__blocks {
+  margin-bottom: 32px;
+}
+
+.isTablet .event_bl_m__top,
+.isMobile .event_bl_m__top {
+  margin-bottom: 16px;
 }
 
 .footer {

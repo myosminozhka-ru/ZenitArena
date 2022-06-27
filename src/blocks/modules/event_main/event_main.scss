@@ -1,0 +1,40 @@
+.event_bl_m {
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+    &__button {
+        border: 0;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #F7F7F7;
+        transition: all .3s ease-out;
+        margin-right: 10px;
+        padding: 4px 12px;
+        background: #B6B6C6;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background: #00B0DE;
+        }
+        &.isActive {
+            background: #00B0DE;
+        }
+    }
+    &__blocks {
+        margin-bottom: 32px;
+    }
+}
+.isTablet, .isMobile {
+    .event_bl_m {
+        &__top {
+            margin-bottom: 16px;
+        }
+    }
+}
