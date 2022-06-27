@@ -1,0 +1,111 @@
+.brand_bl {
+    &__text {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #131313;
+        padding: 28px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
+        border-radius: 10px 0px 0px 10px;
+        position: relative;
+        margin-bottom: 32px;
+        &:before {
+            content: '';
+            width: 4px;
+            background: #006FAB;
+            height: calc(100% - 30px);
+            top: 15px;
+            left: 0;
+            position: absolute;
+        }
+    }
+    &__blocks {
+        margin-bottom: 40px;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 28px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+    &__l-side {
+        width: 29.5%;
+        font-size: 0;
+        img {
+            width: 100%;
+        }
+    }
+    &__r-side {
+        width: 70.5%;
+    }
+    &__tit {
+        padding: 16px 24px;
+        background: #F7FAFB;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: #131313;
+        width: calc(100% + 28px);
+    }
+    &__txt {
+        padding: 16px 24px;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #131313;
+    }
+}
+.isTablet, .isMobile {
+    .brand_bl {
+        &__text {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 145%;
+            border-radius: 10px 0px 0px 10px;
+            width: calc(100% + 20px);
+            &:before {
+                height: calc(100% - 36px);
+                top: 18px;
+            }
+        }
+        &__blocks {
+            margin-bottom: 20px;
+        }
+        &__block {
+            padding: 20px;
+            flex-direction: column;
+        }
+        &__l-side {
+            width: 100%;
+            margin-bottom: 32px;
+            margin-right: 0;
+        }
+        &__r-side {
+            width: 100%;
+        }
+        &__tit {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+        &__txt {
+            padding: 12px 0px;
+            color: #9797A5;
+        }
+    }
+}

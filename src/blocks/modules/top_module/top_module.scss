@@ -50,7 +50,8 @@
         color: #131313;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         a {
             font-family: 'HeliosC', serif;
             font-style: normal;
@@ -131,6 +132,25 @@
     .isTablet, .isMobile {
         .breadcrums {
             display: none;
+        }
+    }
+}
+.bredPage {
+    .isTablet, .isMobile {
+        .header {
+            margin-bottom: 32px;
+        }
+        .breadcrums {
+            color: #9797A5;
+            a {
+                color: #9797A5;
+            }
+            &__splash {
+                background: #9797A5;
+            }
+        }
+        .top_module {
+            margin-bottom: 32px;
         }
     }
 }

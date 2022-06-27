@@ -131,6 +131,10 @@
         display: flex;
         align-items: center;
         border-top: 1px solid #E8E8E8;
+        &.block_end {
+            border: 0;
+            padding-top: 40px;
+        }
     }
     &__button {
         border-radius: 10px;
@@ -170,6 +174,26 @@
             }
         }
     }
+    &__subtitle {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #131313;
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+    &__input_title {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #9797A5;
+        display: block;
+        margin-bottom: 4px;
+    }
 }
 .isTablet, .isMobile {
     .auth_block {
@@ -177,7 +201,25 @@
             display: none;
         }
         &__r-side {
-            padding: 20px;
+            padding: 0 20px;
+            width: 100%;
+        }
+        &__tit {
+            margin-top: 20px;
+        }
+        &__buttons {
+            &.block_end {
+                padding-top: 20px;
+            }
+        }
+        &__button {
+            padding: 14px 20px;
+        }
+        &__form {
+            .checkbox {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
         }
     }
 }
