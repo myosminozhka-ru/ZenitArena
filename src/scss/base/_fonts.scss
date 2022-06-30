@@ -7,16 +7,30 @@
 @font-face {
 	font-family: "HeliosC";
 	font-display: swap;
+<<<<<<< HEAD
 	src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
 	font-weight: 400;
+=======
+	src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+	font-weight: 700;
+>>>>>>> bb5cf880d2d46d23bfa4535d9408f3c1dc0ebb8b
 }
 @font-face {
 	font-family: "HeliosC";
 	font-display: swap;
-	src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-	font-weight: 700;
+	src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+	font-weight: 400;
 }
 @font-face {
+<<<<<<< HEAD
+=======
+	font-family: "HeliosCompressedC";
+	font-display: swap;
+	src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+	font-weight: 400;
+}
+@font-face {
+>>>>>>> bb5cf880d2d46d23bfa4535d9408f3c1dc0ebb8b
 	font-family: "HeliosCondBlackC";
 	font-display: swap;
 	src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
@@ -27,12 +41,15 @@
 	font-display: swap;
 	src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
 	font-weight: 700;
+<<<<<<< HEAD
 }
 @font-face {
 	font-family: "HeliosCompressedC";
 	font-display: swap;
 	src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
 	font-weight: 400;
+=======
+>>>>>>> bb5cf880d2d46d23bfa4535d9408f3c1dc0ebb8b
 }
 @font-face {
 	font-family: "HeliosCondC";
