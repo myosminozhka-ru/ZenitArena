@@ -61,6 +61,21 @@ $(function() {
                 }
             }
         ]
+    });    
+    
+    $('.work_bl__close').on('click', function() {
+        $(this).parents('.work_bl__block').find('.cards_bl').toggleClass('isActive').slideToggle();
+        $(this).toggleClass('isActive');
+        if ($(this).hasClass('isActive')) {
+            $(this).text('Свернуть');
+        } else {
+            $(this).text('Подробнее');
+        }
+    });
+
+    $('.work_bl__cls').on('click', function() {
+        $(this).parent().find('> ul').toggleClass('isActive').slideToggle();
+        $(this).toggleClass('isActive');    
     });
     
     // $('#responsiveTabsDemo').responsiveTabs({
