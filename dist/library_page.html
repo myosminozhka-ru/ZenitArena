@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css?_v=20220630173239">
+</head>
+<body class="bredPage">
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        <div class="owf_block" :class="{'isActive': mainHeader.isUserOpened}"></div>
+<header class="header" :class="{'isActive': mainHeader.isUserOpened}">
+    <div class="header__in center_block">
+        <a href="#" class="header__logo_m"><img src="./img/svg/logo_mob.svg" alt=""></a>
+        <div class="burger">
+            <div class="burger__icon" :class="{'isActive': mainHeader.isMobileMenuOpened}"></div>
+            <div class="burger__body" :class="{'isActive': mainHeader.isMobileMenuOpened}">
+                <div class="burger__in center_block">
+                    <div class="burger__item">
+                        <nav class="burger__menu">
+                            <ul>
+                                <li class="hasChild">
+                                    <a href="#">О компании<span></span></a>
+                                    <ul>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Руководство</a></li>
+                                        <li><a href="#">Этика и принципы</a></li>
+                                        <li><a href="#">Реквизиты</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="burger__item">
+                        <nav class="burger__menu">
+                            <ul>
+                                <li class="hasChild">
+                                    <a href="#">Информация<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Новости администрации</a></li>
+                                        <li><a href="#">Новости сотрудников</a></li>
+                                        <li><a href="#">Обьявления</a></li>
+                                        <li><a href="#">События</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="burger__item">
+                        <nav class="burger__menu">
+                            <ul>
+                                <li class="hasChild">
+                                    <a href="#">Сервисы<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Служба безопасности</a></li>
+                                        <li><a href="#">Отдел IT</a></li>
+                                        <li><a href="#">Отдел хозяйственного обеспечения</a></li>
+                                        <li><a href="#">Экскурсии</a></li>
+                                        <li><a href="#">Внешние сервисы</a></li>
+                                        <li><a href="#">Отдел HR</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="burger__item">
+                        <nav class="burger__menu">
+                            <ul>
+                                <li class="hasChild">
+                                    <a href="#">База знаний<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Нормативные документы</a></li>
+                                        <li><a href="#">Экология</a></li>
+                                        <li><a href="#">Шаблоны документов</a></li>
+                                        <li><a href="#">Брендбук</a></li>
+                                        <li><a href="#">Фото/видео</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="burger__item">
+                        <nav class="burger__menu">
+                            <ul>
+                                <li class="hasChild">
+                                    <a href="#">Сотрудники<span></span></a>
+                                    <ul>
+                                        <li><a href="#">Структура и сотрудники</a></li>
+                                        <li><a href="#">Календарь дней рождения</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
+        <div class="user_h" :class="{'isActive': mainHeader.isUserOpened}">
+            <div class="user_h__icon">
+                <div class="user_h__name">Иван Иванов</div>
+                <div class="user_h__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt=""></picture></div>
+            </div>
+            <div class="user_h__body">
+                <a href="#" class="user_h__link">Личный кабинет</a>
+                <a href="#" class="user_h__link">Выйти</a>
+            </div>
+        </div>
+        <div class="alert_h">
+            <div class="alert_h__icon"></div>
+            <div class="alert_h__body"></div>
+        </div>
+    </div>
+</header>
+        <main class="content center_block">
+            <div class="top_module">
+    
+    <div class="top_module__r-side">
+        <div class="breadcrums">
+            <a href="#">Главная</a>
+            <span class="breadcrums__splash"></span>
+            <a href="#">Информация</a>
+            <span class="breadcrums__splash"></span>
+            <span>Новости администрации</span>
+        </div>
+        <form class="search_block">
+            <input type="text" placeholder="Поиск по разделу">
+            <input type="submit" value="Поиск">
+        </form>
+    </div>
+</div>
+            <div class="bottom_module">
+                <div class="bottom_module__l-side">
+                    <div class="l_block">
+    <div class="l_block__title">Информация</div>
+    <nav class="l_block__menu">
+        <ul>
+            <li><a href="#">Новости администрации</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Объявления</a></li>
+            <li><a href="#">События</a></li>
+        </ul>
+    </nav>
+</div>
+                </div>
+                <div class="bottom_module__r-side">
+                    <div class="lib_main">
+    <div class="lib_main__top">
+        <button class="lib_main__button">Все</button>
+        <button class="lib_main__button">Общие</button>
+        <button class="lib_main__button">Документы</button>
+        <button class="lib_main__button">Статьи</button>
+        <button class="lib_main__button isActive">Информация</button>
+    </div>
+    <div class="lib_main__blocks">
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lib_main__block">
+            <div class="lib_main__title">Сервисы стадиона</div>
+            <div class="lib_main__text">На «Газпром Арене» существует множество сервисов для посетителей, позволяющих сделать пребывание на арене максимально комфортным, а также превратить визит на стадион в новый интересный опыт досуга.</div>
+            <div class="news_bl_docs">
+                <div class="news_bl_docs__blocks">
+                    <div class="news_bl_docs__block">
+                        <img src="./img/doc.svg" alt="">
+                        <div class="news_bl_docs__info">
+                            <div class="news_bl_docs__name">Сервисы стадиона</div>
+                            <div class="news_bl_docs__opt">   
+                                <div class="news_bl_docs__size">1,0 Mб</div>
+                                <div class="news_bl_docs__date">14.08.2022, 13:50</div>
+                            </div>
+                        </div>
+                        <a href="#" class="news_bl_docs__download">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pages_bl">
+        <a href="#" class="pages_bl__prev isDesabled"></a>
+        <span class="pages_bl__link isActive">1</span>
+        <a href="#" class="pages_bl__link">2</a>
+        <a href="#" class="pages_bl__link">3</a>
+        <a href="#" class="pages_bl__link">4</a>
+        <a href="#" class="pages_bl__link">5</a>
+        <a href="#" class="pages_bl__link">...</a>
+        <a href="#" class="pages_bl__link">12</a>
+        <a href="#" class="pages_bl__next"></a>
+    </div>
+</div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer center_block">
+    <a href="#" class="footer__logo"><img src="./img/svg/logo.svg" alt=""></a>
+    <div class="footer__address">
+        <span>Адрес</span> 
+        <div class="footer__adr">Лахтинский проспект, д. 2, корп. 3, стр. 1, Санкт-Петербург, 197229</div>
+    </div>
+    <div class="footer__tels">
+        <span>Телефоны</span>
+        <a href="tel:78124137444" class="footer__tel">+7 812 413-74-44 (справочный)</a>
+        <a href="tel:78124137445" class="footer__tel">+7 812 413-74-45 (факс)</a>
+    </div>
+    <div class="footer__info">
+        <div class="footer__socs">
+            <a href="#" target="_blank" class="footer__soc"><img src="./img/svg/soc1.svg" alt=""></a>
+            <a href="#" target="_blank" class="footer__soc"><img src="./img/svg/soc2.svg" alt=""></a>
+            <a href="#" target="_blank" class="footer__soc"><img src="./img/svg/soc3.svg" alt=""></a>
+        </div>
+        <div class="footer__copy">© 2003–2022 ПАО «Газпром»</div>
+    </div>
+</footer>
+    </div>
+    <script src="js/app.min.js?_v=20220630173239"></script>
+</body>
+</html>
