@@ -385,6 +385,7 @@
     .user_h {
         max-width: 40px;
         order: 3;
+        position: unset;
         &__icon {
             width: 40px;
             height: 40px;
@@ -399,6 +400,34 @@
         &__avatar {
             width: 40px;
             height: 40px;
+        }
+        &__body {
+            border-radius: 0;
+            border: 0;
+            width: calc(100% - 80px);
+            right: unset;
+            top: 100%;
+            left: -100%;
+            padding: 0;
+            padding-top: 16px;
+            height: 100vh;
+        }
+        &__link {
+            border: 0 !important;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 130%;
+            color: #006FAB;
+            padding: 16px 20px;
+        }
+    }
+    .header.isActive {
+        .user_h {
+            &__body {
+                box-shadow: inset 0px 4px 60px rgba(0, 111, 171, 0.2);
+                left: 0;
+            }
         }
     }
     .alert_h {

@@ -3,8 +3,9 @@ globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
+window.jQuery = $; window.$ = $;
 import 'slick-carousel';
-// import 'responsive-tabs';
+import 'responsive-tabs';
 
 import MainHeader from '../blocks/modules/header/header.js';
 // import Modals from '../blocks/modules/modals/modals.js';
@@ -78,9 +79,9 @@ $(function() {
         $(this).toggleClass('isActive');    
     });
     
-    // $('#responsiveTabsDemo').responsiveTabs({
-    //     startCollapsed: 'accordion'
-    // });
+    $('#responsiveTabsDemo').responsiveTabs({
+        startCollapsed: 'accordion'
+    });
 });
 
 window.app = new Vue({
