@@ -1,0 +1,284 @@
+.news_m_bl {
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+    &__button {
+        border: 0;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #F7F7F7;
+        transition: all .3s ease-out;
+        margin-right: 10px;
+        padding: 4px 12px;
+        background: #B6B6C6;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background: #00B0DE;
+        }
+        &.isActive {
+            background: #00B0DE;
+        }
+    }
+    &__blocks {
+        margin-bottom: 32px;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 28px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+    &__l-side {
+        flex: 0 0 300px;
+        margin-right: 24px;
+        height: 190px;
+        overflow: hidden;
+        border-radius: 10px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__r-side {
+        width: 100%;
+    }
+    &__info {
+        margin-bottom: 17px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__date {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #9797A5;
+    }
+    &__name {
+        margin-left: 16px;
+        margin-right: auto;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #9797A5;
+    }
+    &__follow {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #9797A5;
+        position: relative;
+        padding-right: 26px;
+        text-decoration: none;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            margin-top: -9px;
+            background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 10.689V12.2565C9.82119 12.0165 9.09471 11.9429 8.38155 12.0418C7.6684 12.1408 6.9894 12.4094 6.40157 12.8252C5.81375 13.2409 5.33426 13.7916 5.00337 14.4311C4.67249 15.0705 4.49986 15.78 4.5 16.5L3 16.4993C2.99977 15.5834 3.20919 14.6797 3.61222 13.8573C4.01526 13.0349 4.6012 12.3157 5.32516 11.7548C6.04912 11.1939 6.89188 10.8061 7.78887 10.6212C8.68585 10.4364 9.61325 10.4593 10.5 10.6883V10.689ZM9 9.75C6.51375 9.75 4.5 7.73625 4.5 5.25C4.5 2.76375 6.51375 0.75 9 0.75C11.4862 0.75 13.5 2.76375 13.5 5.25C13.5 7.73625 11.4862 9.75 9 9.75ZM9 8.25C10.6575 8.25 12 6.9075 12 5.25C12 3.5925 10.6575 2.25 9 2.25C7.3425 2.25 6 3.5925 6 5.25C6 6.9075 7.3425 8.25 9 8.25ZM13.5 12.75V10.5H15V12.75H17.25V14.25H15V16.5H13.5V14.25H11.25V12.75H13.5Z' fill='%23B6B6C6'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        @media all and (max-width: 1140px) {
+            display: none;
+        }
+    }
+    &__title {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        display: block;
+        text-decoration: none;
+        line-height: 140%;
+        color: #131313;
+        margin-bottom: 8px;
+    }
+    &__text {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #131313;
+    }
+}
+.review {
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        background: #FFFFFF;
+        border-radius: 10px 0px 0px 10px;
+        margin-bottom: 32px;
+        padding: 0px 40px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            right: -1000px;
+            width: 1000px;
+            background: #FFFFFF;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+        }
+        @media all and (max-width: 1360px) {
+            padding: 0 20px;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        padding: 30px 0;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        transition: all .3s ease-out;
+        line-height: 130%;
+        color: #131313;
+        border-bottom: 2px solid transparent;
+        &:not(:last-child) {
+            margin-right: 72px;
+            @media all and (max-width: 1360px) {
+                margin-right: 20px;
+            }
+        }
+        &.isActive {
+            color: #006FAB;
+            border-color: #006FAB;
+        }
+    }
+    &__block {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+    &__button {
+        display: none;
+    }
+}
+.isTablet, .isMobile {
+    .review {
+        &__tabs {
+            margin-left: -20px;
+            margin-right: -20px;
+            position: relative;
+            &.isActive {
+                ul {
+                    li {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+        &__button {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='4' height='18' viewBox='0 0 4 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM2 14C0.9 14 0 14.9 0 16C0 17.1 0.9 18 2 18C3.1 18 4 17.1 4 16C4 14.9 3.1 14 2 14ZM2 7C0.9 7 0 7.9 0 9C0 10.1 0.9 11 2 11C3.1 11 4 10.1 4 9C4 7.9 3.1 7 2 7Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        ul {
+            flex-direction: column;
+            padding: 0;
+            border-radius: 0;
+            &:before {
+                display: none;
+            }
+        }
+        &__btn {
+            width: 100%;
+            padding: 17px 20px;
+            padding-right: 44px;
+            margin-right: 0 !important;
+            border: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #131313;
+            order: 2;
+            display: none;
+            &.isActive {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 130%;
+                color: #131313;
+                order: 1;
+                display: block !important;
+            }
+        }
+    }
+    .news_m_bl { 
+        &__follow {
+            display: none;
+        }
+        &__info {
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        &__name {
+            margin-left: auto;
+            margin-right: 0;
+        }
+        &__top {
+            margin-bottom: 16px;
+        }
+        &__block {
+            flex-direction: column;
+            padding: 16px;
+        }
+        &__l-side {
+            margin-right: 0;
+            flex: none;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        &__date {
+            margin-bottom: 6px;
+        }
+        &__title {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        &__text {
+            display: none;
+        }
+    }
+}

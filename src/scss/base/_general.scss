@@ -21,6 +21,12 @@ body {
 
 .owh {
     overflow: hidden;
+    body {
+        overflow: hidden;
+    }
+    .wrapper {
+        overflow: hidden;
+    }
 }
 
 .wrapper {

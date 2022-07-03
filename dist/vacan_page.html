@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карточка вакансии</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220701140531">
+    <link rel="stylesheet" href="css/style.css?_v=20220704001151">
 </head>
 <body class="inPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <div class="owf_block" :class="{'isActive': mainHeader.isUserOpened}"></div>
-<header class="header" :class="{'isActive': mainHeader.isUserOpened}">
+        <div class="owf_block"></div>
+<header class="header">
     <div class="header__in center_block">
         <a href="#" class="header__logo_m"><img src="./img/svg/logo_mob.svg" alt=""></a>
         <div class="burger">
-            <div class="burger__icon" :class="{'isActive': mainHeader.isMobileMenuOpened}"></div>
-            <div class="burger__body" :class="{'isActive': mainHeader.isMobileMenuOpened}">
+            <div class="burger__icon"></div>
+            <div class="burger__close"></div>
+            <div class="burger__body">
                 <div class="burger__in center_block">
                     <div class="burger__item">
                         <nav class="burger__menu">
@@ -100,7 +101,7 @@
             </div>
         </div>
         <a href="#" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
-        <div class="user_h" :class="{'isActive': mainHeader.isUserOpened}">
+        <div class="user_h">
             <div class="user_h__icon">
                 <div class="user_h__name">Иван Иванов</div>
                 <div class="user_h__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt=""></picture></div>
@@ -199,6 +200,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220701140531"></script>
+    <script src="js/app.min.js?_v=20220704001151"></script>
 </body>
 </html>

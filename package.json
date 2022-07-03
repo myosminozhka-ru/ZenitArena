@@ -43,7 +43,6 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
-    "responsive-tabs": "^1.6.3",
     "slick-carousel": "^1.8.1",
     "vue": "^2.6.14"
   }
