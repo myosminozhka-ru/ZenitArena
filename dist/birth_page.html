@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура компании</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220704001151">
+    <link rel="stylesheet" href="css/style.css?_v=20220704151952">
 </head>
 <body class="bredPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -149,97 +149,114 @@
 </div>
                 </div>
                 <div class="bottom_module__r-side">
-                    <div class="birth_bl">
-    <div class="birth_bl__top">
-        <button class="birth_bl__button">Январь</button>
-        <button class="birth_bl__button">Февраль</button>
-        <button class="birth_bl__button">Март</button>
-        <button class="birth_bl__button">Апрель</button>
-        <button class="birth_bl__button">Май</button>
-        <button class="birth_bl__button">Июнь</button>
-        <button class="birth_bl__button">Июль</button>
-        <button class="birth_bl__button isActive">Август</button>
-        <button class="birth_bl__button">Сентябрь</button>
-        <button class="birth_bl__button">Октябрь</button>
-        <button class="birth_bl__button">Ноябрь</button>
-        <button class="birth_bl__button">Декабрь</button>
-    </div>
-    <div class="birth_bl__blocks">
-        <div class="birth_bl__block">
-            <div class="birth_bl__l-side">10 августа</div>
-            <div class="birth_bl__r-side">
-                <div class="birth_bl__card">
-                    <div class="birth_bl__hide_bl">10 августа</div>
-                    <div class="birth_bl__item">
-                        <div class="birth_bl__info">
-                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
-                            <div class="birth_bl__name">Дмитрий Анатольевич Тюнин</div>
-                        </div>
-                        <div class="birth_bl__work">
-                            <div class="birth_bl__tit">Отдел IT</div>
-                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <div class="tabs_block">
+    <div class="review">
+        <div class="review__tabs">
+            <ul>
+                <li class="review__btn" id="review__block-1">Календарь</li>
+                <li class="review__btn" id="review__block-2">Дни рождения списком</li>
+            </ul>
+            <div class="review__button"></div>
         </div>
-        <div class="birth_bl__block">
-            <div class="birth_bl__l-side">17 августа</div>
-            <div class="birth_bl__r-side">
-                <div class="birth_bl__card">
-                    <div class="birth_bl__hide_bl">17 августа</div>
-                    <div class="birth_bl__item">
-                        <div class="birth_bl__info">
-                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
-                            <div class="birth_bl__name">Анна Михайловна Иванова</div>
-                        </div>
-                        <div class="birth_bl__work">
-                            <div class="birth_bl__tit">Отдел HR</div>
-                            <div class="birth_bl__subtit">Руководитель</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="review__blocks">
+            <div class="review__block review__block-1">
             </div>
-        </div>
-        <div class="birth_bl__block">
-            <div class="birth_bl__l-side">18 августа</div>
-            <div class="birth_bl__r-side">
-                <div class="birth_bl__card">
-                    <div class="birth_bl__hide_bl">18 августа</div>
-                    <div class="birth_bl__item">
-                        <div class="birth_bl__info">
-                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
-                            <div class="birth_bl__name">Петр Петрович Попов</div>
-                        </div>
-                        <div class="birth_bl__work">
-                            <div class="birth_bl__tit">Департамент информационных технологий и связи</div>
-                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
-                        </div>
+            <div class="review__block review__block-2">
+                <div class="birth_bl">
+                    <div class="birth_bl__top">
+                        <button class="birth_bl__button">Январь</button>
+                        <button class="birth_bl__button">Февраль</button>
+                        <button class="birth_bl__button">Март</button>
+                        <button class="birth_bl__button">Апрель</button>
+                        <button class="birth_bl__button">Май</button>
+                        <button class="birth_bl__button">Июнь</button>
+                        <button class="birth_bl__button">Июль</button>
+                        <button class="birth_bl__button isActive">Август</button>
+                        <button class="birth_bl__button">Сентябрь</button>
+                        <button class="birth_bl__button">Октябрь</button>
+                        <button class="birth_bl__button">Ноябрь</button>
+                        <button class="birth_bl__button">Декабрь</button>
                     </div>
-                </div>
-                <div class="birth_bl__card">
-                    <div class="birth_bl__hide_bl">18 августа</div>
-                    <div class="birth_bl__item">
-                        <div class="birth_bl__info">
-                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
-                            <div class="birth_bl__name">Иван Иванович Иванов</div>
+                    <div class="birth_bl__blocks">
+                        <div class="birth_bl__block">
+                            <div class="birth_bl__l-side">10 августа</div>
+                            <div class="birth_bl__r-side">
+                                <div class="birth_bl__card">
+                                    <div class="birth_bl__hide_bl">10 августа</div>
+                                    <div class="birth_bl__item">
+                                        <div class="birth_bl__info">
+                                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
+                                            <div class="birth_bl__name">Дмитрий Анатольевич Тюнин</div>
+                                        </div>
+                                        <div class="birth_bl__work">
+                                            <div class="birth_bl__tit">Отдел IT</div>
+                                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="birth_bl__work">
-                            <div class="birth_bl__tit">Отдел HR</div>
-                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                        <div class="birth_bl__block">
+                            <div class="birth_bl__l-side">17 августа</div>
+                            <div class="birth_bl__r-side">
+                                <div class="birth_bl__card">
+                                    <div class="birth_bl__hide_bl">17 августа</div>
+                                    <div class="birth_bl__item">
+                                        <div class="birth_bl__info">
+                                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
+                                            <div class="birth_bl__name">Анна Михайловна Иванова</div>
+                                        </div>
+                                        <div class="birth_bl__work">
+                                            <div class="birth_bl__tit">Отдел HR</div>
+                                            <div class="birth_bl__subtit">Руководитель</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="birth_bl__card">
-                    <div class="birth_bl__hide_bl">18 августа</div>
-                    <div class="birth_bl__item">
-                        <div class="birth_bl__info">
-                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
-                            <div class="birth_bl__name">Александра Олеговна Высоцкая</div>
-                        </div>
-                        <div class="birth_bl__work">
-                            <div class="birth_bl__tit">Департамент по подготовке производства</div>
-                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                        <div class="birth_bl__block">
+                            <div class="birth_bl__l-side">18 августа</div>
+                            <div class="birth_bl__r-side">
+                                <div class="birth_bl__card">
+                                    <div class="birth_bl__hide_bl">18 августа</div>
+                                    <div class="birth_bl__item">
+                                        <div class="birth_bl__info">
+                                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
+                                            <div class="birth_bl__name">Петр Петрович Попов</div>
+                                        </div>
+                                        <div class="birth_bl__work">
+                                            <div class="birth_bl__tit">Департамент информационных технологий и связи</div>
+                                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="birth_bl__card">
+                                    <div class="birth_bl__hide_bl">18 августа</div>
+                                    <div class="birth_bl__item">
+                                        <div class="birth_bl__info">
+                                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
+                                            <div class="birth_bl__name">Иван Иванович Иванов</div>
+                                        </div>
+                                        <div class="birth_bl__work">
+                                            <div class="birth_bl__tit">Отдел HR</div>
+                                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="birth_bl__card">
+                                    <div class="birth_bl__hide_bl">18 августа</div>
+                                    <div class="birth_bl__item">
+                                        <div class="birth_bl__info">
+                                            <div class="birth_bl__avatar"><picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.jpg" alt=""></picture></div>
+                                            <div class="birth_bl__name">Александра Олеговна Высоцкая</div>
+                                        </div>
+                                        <div class="birth_bl__work">
+                                            <div class="birth_bl__tit">Департамент по подготовке производства</div>
+                                            <div class="birth_bl__subtit">Заместитель начальника отдела</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,6 +288,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220704001151"></script>
+    <script src="js/app.min.js?_v=20220704151952"></script>
 </body>
 </html>

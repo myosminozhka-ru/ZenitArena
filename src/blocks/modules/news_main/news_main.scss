@@ -132,29 +132,31 @@
     }
 }
 .review {
-    ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-        background: #FFFFFF;
-        border-radius: 10px 0px 0px 10px;
-        margin-bottom: 32px;
-        padding: 0px 40px;
-        position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            right: -1000px;
-            width: 1000px;
+    &__tabs {
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
             background: #FFFFFF;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-        }
-        @media all and (max-width: 1360px) {
-            padding: 0 20px;
+            border-radius: 10px 0px 0px 10px;
+            margin-bottom: 32px;
+            padding: 0px 40px;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                right: -1000px;
+                width: 1000px;
+                background: #FFFFFF;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+            }
+            @media all and (max-width: 1360px) {
+                padding: 0 20px;
+            }
         }
     }
     &__btn {
@@ -202,6 +204,14 @@
                     }
                 }
             }
+            ul {
+                flex-direction: column;
+                padding: 0;
+                border-radius: 0;
+                &:before {
+                    display: none;
+                }
+            }
         }
         &__button {
             display: block;
@@ -211,14 +221,6 @@
             width: 24px;
             height: 24px;
             background: url("data:image/svg+xml,%3Csvg width='4' height='18' viewBox='0 0 4 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM2 14C0.9 14 0 14.9 0 16C0 17.1 0.9 18 2 18C3.1 18 4 17.1 4 16C4 14.9 3.1 14 2 14ZM2 7C0.9 7 0 7.9 0 9C0 10.1 0.9 11 2 11C3.1 11 4 10.1 4 9C4 7.9 3.1 7 2 7Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
-        }
-        ul {
-            flex-direction: column;
-            padding: 0;
-            border-radius: 0;
-            &:before {
-                display: none;
-            }
         }
         &__btn {
             width: 100%;
