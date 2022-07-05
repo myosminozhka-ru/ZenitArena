@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура компании</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220705011800">
+    <link rel="stylesheet" href="css/style.css?_v=20220705123244">
 </head>
 <body class="bredPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -111,6 +111,15 @@
                 <a href="#" class="user_h__link">Выйти</a>
             </div>
         </div>
+        <div class="search_h">
+            <div class="search_h__icon"></div>
+            <div class="search_h__body">
+                <div class="search_h__close"></div>
+                <form action="" class="search_h__search">
+                    <input type="search" name="Поиск по разделу" id="">
+                </form>
+            </div>
+        </div>
         <div class="alert_h">
             <div class="alert_h__icon"></div>
             <div class="alert_h__body"></div>
@@ -160,8 +169,44 @@
         </div>
         <div class="review__blocks">
             <div class="review__block review__block-1">
-                <v-calendar></v-calendar>
-      <v-date-picker v-model='selectedDate' />
+                <div class="dates">
+                    <div class="dates__top">
+                        <div class="slider-nav">
+                            <div class="date_year">2022</div>
+                            <div class="date_year">2023</div>
+                        </div>
+                    </div>
+                    <div class="dates__blocks slider-for">
+                        <div class="dates__item">
+                            <div class="date_block" data-date="01/01/2022"></div>
+                            <div class="date_block" data-date="01/02/2022"></div>
+                            <div class="date_block" data-date="01/03/2022"></div>
+                            <div class="date_block" data-date="01/04/2022"></div>
+                            <div class="date_block" data-date="01/05/2022"></div>
+                            <div class="date_block" data-date="01/06/2022"></div>
+                            <div class="date_block" data-date="01/07/2022"></div>
+                            <div class="date_block" data-date="01/08/2022"></div>
+                            <div class="date_block" data-date="01/09/2022"></div>
+                            <div class="date_block" data-date="01/10/2022"></div>
+                            <div class="date_block" data-date="01/11/2022"></div>
+                            <div class="date_block" data-date="01/12/2022"></div>
+                        </div>
+                        <div class="dates__item">
+                            <div class="date_block" data-date="01/01/2023"></div>
+                            <div class="date_block" data-date="01/02/2023"></div>
+                            <div class="date_block" data-date="01/03/2023"></div>
+                            <div class="date_block" data-date="01/04/2023"></div>
+                            <div class="date_block" data-date="01/05/2023"></div>
+                            <div class="date_block" data-date="01/06/2023"></div>
+                            <div class="date_block" data-date="01/07/2023"></div>
+                            <div class="date_block" data-date="01/08/2023"></div>
+                            <div class="date_block" data-date="01/09/2023"></div>
+                            <div class="date_block" data-date="01/10/2023"></div>
+                            <div class="date_block" data-date="01/11/2023"></div>
+                            <div class="date_block" data-date="01/12/2023"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="review__block review__block-2">
                 <div class="birth_bl">
@@ -290,6 +335,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220705011800"></script>
+    <script src="js/app.min.js?_v=20220705123244"></script>
 </body>
 </html>

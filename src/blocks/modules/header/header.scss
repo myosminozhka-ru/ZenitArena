@@ -29,6 +29,12 @@
     margin-bottom: 52px;
     position: relative;
     z-index: 30;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
     &__in {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -264,6 +270,9 @@
 
     }
 }
+.search_h {
+    display: none;
+}
 .isTablet, .isMobile {
     .header {
         margin-bottom: 28px;
@@ -399,7 +408,7 @@
     }
     .user_h {
         max-width: 40px;
-        order: 3;
+        order: 4;
         position: unset;
         &__icon {
             width: 40px;
@@ -449,12 +458,79 @@
         order: 2;
         flex: none;
         margin-left: 28px;
-        margin-right: auto;
         &__icon {
             width: 32px;
             height: 32px;
             border: 0;
             border-radius: 0;
+        }
+    }
+    .search_h {
+        display: block;
+        order: 3;
+        margin-left: 28px;
+        margin-right: auto;
+        &__icon {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0412 20.1561L27.7518 25.8654L25.8652 27.7521L20.1558 22.0414C18.0315 23.7444 15.3892 24.6706 12.6665 24.6667C6.0425 24.6667 0.666504 19.2907 0.666504 12.6667C0.666504 6.04275 6.0425 0.666748 12.6665 0.666748C19.2905 0.666748 24.6665 6.04275 24.6665 12.6667C24.6704 15.3894 23.7441 18.0317 22.0412 20.1561ZM19.3665 19.1667C21.0587 17.4266 22.0037 15.094 21.9998 12.6667C21.9998 7.50941 17.8225 3.33341 12.6665 3.33341C7.50917 3.33341 3.33317 7.50941 3.33317 12.6667C3.33317 17.8227 7.50917 22.0001 12.6665 22.0001C15.0937 22.0039 17.4264 21.0589 19.1665 19.3667L19.3665 19.1667Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &__body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 60px rgba(0, 111, 171, 0.2);
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            transition: all .3s ease-out;
+            height: 72px;
+            &.isActive {
+                left: 0;
+            }
+        }
+        &__close {
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+            margin-right: 12px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00023L7.778 11.9502L6.364 13.3642L0 7.00023L6.364 0.63623L7.778 2.05023L2.828 7.00023Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &__search {
+            width: 100%;
+            input[type="search"] {
+                padding: 13px 20px;
+                background: #F7FAFB;
+                border: 1px solid #E3F3F8;
+                border-radius: 10px;
+                font-family: 'HeliosC', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                width: 100%;
+                line-height: 140%;
+                letter-spacing: 0.01em;
+                color: #000;
+                padding-right: 35px;
+                &::placeholder {
+                    color: #B6B6C6;
+                }
+                &::-webkit-search-cancel-button {
+                    width: 13px;
+                    cursor: pointer;
+                    height: 13px;
+                    background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99974 5.58623L11.9497 0.63623L13.3637 2.05023L8.41374 7.00023L13.3637 11.9502L11.9497 13.3642L6.99974 8.41423L2.04974 13.3642L0.635742 11.9502L5.58574 7.00023L0.635742 2.05023L2.04974 0.63623L6.99974 5.58623Z' fill='%23B6B6C6'/%3E%3C/svg%3E%0A") 50% no-repeat !important;
+                    position: absolute;  
+                    right: 18px;
+                    top: 50%;
+                    margin-top: -6.5px;
+                }
+            }
         }
     }
 }

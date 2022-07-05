@@ -34,6 +34,9 @@ body {
     flex-direction: column;
     overflow-x: hidden;    
     height: inherit;
+    &.isTablet, &.isMobile {
+        overflow: unset;
+    }
 }
 
 .content {

@@ -115,6 +115,152 @@
         display: none;
     }
 }
+.dates {
+    &__blocks {
+        padding: 28px;
+        padding-bottom: 8px;
+        background: #fff;
+        .date_block {
+            width: calc(33.33% - 22px);
+            margin-left: 11px;
+            margin-right: 11px;
+            margin-bottom: 20px;
+            border: 1px solid #E8E8E8;
+            border-radius: 10px;
+            padding: 12px;
+            @media all and (max-width: 1360px) {
+                width: calc(50% - 22px);
+            }
+        }
+    }
+    &__item {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: -11px;
+        margin-right: -11px;
+    }
+    .datepicker-picker {
+        width: 100%;
+    }
+    .datepicker-header .datepicker-controls .button {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000;
+        pointer-events: none;
+    }
+    .datepicker-controls .prev-btn {
+        display: none;
+    }
+    .datepicker-controls .next-btn {
+        display: none;
+    }
+    .datepicker-cell.selected, .datepicker-cell.selected:hover {
+        background-color: #006FAB;
+    }
+    .datepicker-view.datepicker-grid .datepicker-cell {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .datepicker-view {
+        width: 100%;
+        .days {
+            width: 100%;
+            .days-of-week {
+                margin-bottom: 10px;
+                .dow {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    color: #9E9EB0;
+                }
+            }
+            .datepicker-grid {
+                width: 100%;
+                .datepicker-cell {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #131313;
+                    border-radius: 50%;
+                    &.prev, &.next {
+                        color: #B6B6C6;
+                        opacity: 0.5;
+                    }
+                    &.selected {
+                        color: #fff;
+                        background: url("data:image/svg+xml,%3Csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.833252 18.5835C0.833252 8.64237 8.89213 0.583496 18.8333 0.583496V0.583496C28.7744 0.583496 36.8333 8.64237 36.8333 18.5835V18.5835C36.8333 28.5246 28.7744 36.5835 18.8333 36.5835V36.5835C8.89213 36.5835 0.833252 28.5246 0.833252 18.5835V18.5835Z' fill='%23006FAB'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-header .datepicker-controls {
+        margin-bottom: 10px;
+    }
+    &__top {
+        background: #F7FAFB;
+        padding: 32px;
+        .date_year {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 140%;
+            text-align: center;
+            color: #131313;
+        }
+        .slick-prev {
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            margin-top: -12px;
+            top: 50%;
+            font-size: 0;
+            left: calc(50% - 90px);
+            transform: unset;
+            z-index: 10;
+            &:before {
+                display: none;
+            }
+        }
+        .slick-next {
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            margin-top: -12px;
+            top: 50%;
+            font-size: 0;
+            right: calc(50% - 90px);
+            transform: unset;
+            z-index: 10;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
 .isTablet, .isMobile {
     .birth_bl {
         &__top {
@@ -164,6 +310,49 @@
         }
         &__subtit {
             font-size: 16px;
+        }
+    }
+}
+.isMobile {
+    .dates {
+        &__blocks {
+            padding: 0;
+            background: none;
+        }
+        &__item {
+            margin: 0;
+            .date_block {
+                width: 100%;
+                margin-left: 0;
+                border: 0;
+                background: #fff;
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            .datepicker-view .days .datepicker-grid .datepicker-cell.selected {
+                @media all and (max-width: 380px) {
+                    background: #006FAB;
+                }
+            }
+        }
+        &__top {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 24px;
+            margin-bottom: 24px;
+            margin-top: -30px;
+            background: #006FAB;
+            .date_year {
+                color: #fff;
+            }
+            .slick-prev {
+                left: 0px;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            }
+            .slick-next {
+                right: 0;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            }
         }
     }
 }
