@@ -37,6 +37,7 @@
     "gulp-webpcss": "latest",
     "ngrok": "latest",
     "sass": "latest",
+    "vanillajs-datepicker": "^1.2.0",
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
@@ -44,6 +45,7 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1",
+    "v-calendar": "^2.4.1",
     "vue": "^2.6.14"
   }
 }

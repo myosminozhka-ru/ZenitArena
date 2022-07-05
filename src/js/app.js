@@ -2,8 +2,11 @@ import * as globalFunctions from './modules/functions.js';
 globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
+import VCalendar from 'v-calendar';
 import $ from 'jquery';
 import 'slick-carousel';
+import Datepicker from 'vanillajs-datepicker/Datepicker';
+import ru from 'vanillajs-datepicker/locales/ru';
 
 import TabsBlock from '../blocks/modules/news_main/news_main.js';
 // import Modals from '../blocks/modules/modals/modals.js';
@@ -18,6 +21,23 @@ $(document).ready(function () {
         slideEl.hide();
         $('.' + this.id).show();
     });
+
+    // Object.assign(Datepicker.locales, ru);
+    // const elem = document.getElementById('date_block');
+    // const datepicker = new Datepicker(elem, {
+    //     language: 'ru'
+    // }); 
+    // addEventListener('click', function(){
+    //     console.log('test');
+    //     console.log(datepicker.getDate());
+    // });
+    Object.assign(Datepicker.locales, ru);
+    document.querySelectorAll('.date_block[data-date]').forEach((item) => {
+        console.log(item)
+        new Datepicker(item, {
+            language: 'ru'
+        })
+    })
 
     $('.burger__icon').on('click', function() {
         $('html').addClass('owh');
@@ -162,10 +182,11 @@ $(function() {
         $(this).toggleClass('isActive');    
     });
 });
-
+Vue.use(VCalendar);
 window.app = new Vue({
     el: '#app',
     data: () => ({
+        selectedDate: null,
         isMounted: false,
         sizes: {
             tablet: 1024,
