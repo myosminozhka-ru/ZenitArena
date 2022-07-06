@@ -1,11 +1,15 @@
 .adv_block {
     padding-top: 22px;
+    border-radius: 10px;
+    overflow: hidden;
     .news_bl__top {
         padding-bottom: 18px;
     }
 }
 .isTablet, .isMobile {
     .adv_block {
+        border-radius: 0;
+        overflow: unset;
         .news_bl__top {
             padding-bottom: 16px;
         }

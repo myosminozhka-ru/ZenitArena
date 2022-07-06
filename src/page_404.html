@@ -10,7 +10,9 @@
 </head>
 <body class="page_error">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
+        @@include('blocks/modules/header/header.html', {
+            "type" : "",
+        })
         <main class="content">
             @@include('blocks/modules/page_error/page_error.html', {})
         </main>

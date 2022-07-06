@@ -114,6 +114,8 @@
             margin-right: 0;
             width: 100%;
             margin-bottom: 24px;
+            margin-right: -20px;
+            width: calc(100% + 20px);
         }
         &__number {
             font-size: 45px;

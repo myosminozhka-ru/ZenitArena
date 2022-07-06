@@ -62,13 +62,32 @@
         padding: 28px;
     }
     &__tit {
-        font-family: 'HeliosC', serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 140%;
-        color: #131313;
         margin-bottom: 16px;
+        position: relative;
+        span {
+            padding-right: 24px;
+            display: inline-block;
+            background: #fff;
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 140%;
+            color: #131313;
+            position: relative;
+            z-index: 2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            background: #E8E8E8;
+            margin-top: 2px;
+        }
     }
     &__txt {
         font-family: 'HeliosC', serif;
@@ -77,6 +96,18 @@
         font-size: 16px;
         line-height: 160%;
         color: #131313;
+        a {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: #131313;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__block:not(:last-child) {
         .vacan_bl__txt {
@@ -95,6 +126,7 @@
         &__top {
             flex-wrap: wrap;
             padding: 18px 20px;
+            align-items: flex-start;
         }
         &__date {
             order: 2;
@@ -125,7 +157,9 @@
             padding: 24px 20px;
         }
         &__tit {
-            font-size: 18px;
+            span {
+                font-size: 18px;
+            }
             margin-bottom: 12px;
         }
         &__block:not(:last-child) {

@@ -1,5 +1,7 @@
 .l_block {
     padding-top: 14px;
+    display: flex;
+    flex-direction: column;
     &__title {
         font-family: 'HeliosC', serif;
         font-style: normal;
@@ -10,6 +12,7 @@
         margin-bottom: 40px;
     }
     &__menu {
+        margin-bottom: 64px;
         ul {
             margin: 0;
             padding: 0;
@@ -23,7 +26,7 @@
                     line-height: 130%;
                     text-decoration: none;
                     color: #131313;
-                    &:hover {
+                    &:hover, &.isActive {
                         color: #006FAB;
                     }
                 }
@@ -31,6 +34,18 @@
                     margin-bottom: 24px;
                 }
             }
+        }
+    }
+    &.block_calend {
+        .calendar_block {
+            order: 2;
+        }
+    }
+}
+.isTablet, .isMobile {
+    .l_block {
+        &.block_calend {
+
         }
     }
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура компании </title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220705123244">
+    <link rel="stylesheet" href="css/style.css?_v=20220706104024">
 </head>
 <body class="inPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -111,15 +111,17 @@
                 <a href="#" class="user_h__link">Выйти</a>
             </div>
         </div>
-        <div class="search_h">
-            <div class="search_h__icon"></div>
-            <div class="search_h__body">
-                <div class="search_h__close"></div>
-                <form action="" class="search_h__search">
-                    <input type="search" name="Поиск по разделу" id="">
-                </form>
+        
+            <div class="search_h">
+                <div class="search_h__icon"></div>
+                <div class="search_h__body">
+                    <div class="search_h__close"></div>
+                    <form action="" class="search_h__search">
+                        <input type="search" name="Поиск по разделу" id="">
+                    </form>
+                </div>
             </div>
-        </div>
+        
         <div class="alert_h">
             <div class="alert_h__icon"></div>
             <div class="alert_h__body"></div>
@@ -153,12 +155,13 @@
     <div class="l_block__title">Информация</div>
     <nav class="l_block__menu">
         <ul>
-            <li><a href="#">Новости администрации</a></li>
+            <li><a href="#" class="isActive">Новости администрации</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Объявления</a></li>
             <li><a href="#">События</a></li>
         </ul>
     </nav>
+    
 </div>
                 </div>
                 <div class="bottom_module__r-side">
@@ -468,6 +471,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220705123244"></script>
+    <script src="js/app.min.js?_v=20220706104024"></script>
 </body>
 </html>

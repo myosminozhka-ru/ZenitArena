@@ -11,7 +11,9 @@
 </head>
 <body class="main_page">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
+        @@include('blocks/modules/header/header.html', {
+            "type" : "",
+        })
         <main class="content center_block">
             @@include('blocks/modules/aside_l/aside_l.html', {})
             @@include('blocks/modules/main_content/main_content.html', {})

@@ -89,11 +89,12 @@
                 font-family: 'HeliosC', serif;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 28px;
+                font-size: 27px;
                 line-height: 140%;
                 color: #000;
                 &::placeholder {
                     color: #B6B6C6;
+                    font-size: 27px;
                 }
             }
             &[type='submit'] {

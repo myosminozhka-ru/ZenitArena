@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карточка вакансии</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220705123244">
+    <link rel="stylesheet" href="css/style.css?_v=20220706104024">
 </head>
 <body class="inPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -111,15 +111,17 @@
                 <a href="#" class="user_h__link">Выйти</a>
             </div>
         </div>
-        <div class="search_h">
-            <div class="search_h__icon"></div>
-            <div class="search_h__body">
-                <div class="search_h__close"></div>
-                <form action="" class="search_h__search">
-                    <input type="search" name="Поиск по разделу" id="">
-                </form>
+        
+            <div class="search_h">
+                <div class="search_h__icon"></div>
+                <div class="search_h__body">
+                    <div class="search_h__close"></div>
+                    <form action="" class="search_h__search">
+                        <input type="search" name="Поиск по разделу" id="">
+                    </form>
+                </div>
             </div>
-        </div>
+        
         <div class="alert_h">
             <div class="alert_h__icon"></div>
             <div class="alert_h__body"></div>
@@ -153,12 +155,13 @@
     <div class="l_block__title">Информация</div>
     <nav class="l_block__menu">
         <ul>
-            <li><a href="#">Новости администрации</a></li>
+            <li><a href="#" class="isActive">Новости администрации</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Объявления</a></li>
             <li><a href="#">События</a></li>
         </ul>
     </nav>
+    
 </div>
                 </div>
                 <div class="bottom_module__r-side">
@@ -174,13 +177,13 @@
     </div>
     <div class="vacan_bl__info">
         <div class="vacan_bl__block">
-            <div class="vacan_bl__tit">Описание вакансии</div>
+            <div class="vacan_bl__tit"><span>Описание вакансии</span></div>
             <div class="vacan_bl__txt">Ведение бухгалтерского и налогового учета клиентов компании; своевременное составление и сдача налоговой, бухгалтерской отчетности по нескольким юридическим лицам (ТСНО, УСН); учет валютных операций по текущей деятельности организации; контроль дебиторской и кредиторской задолженности; зкспертиза первичных документов на предмет негативных налоговых и финансовых последствий.</div>
         </div>
         <div class="vacan_bl__block">
-            <div class="vacan_bl__tit">Контактная информация</div>
+            <div class="vacan_bl__tit"><span>Контактная информация</span></div>
             <div class="vacan_bl__txt">
-                HR директор: Дмитрий Дмитриев <br> Телефон: +7 (999) 000-00-00 <br> E-mail: email@gmail.ru
+                HR директор: Дмитрий Дмитриев <br> Телефон: <a href="tel:79990000000">+7 (999) 000-00-00</a> <br> E-mail: <a href="mailto:email@gmail.ru">email@gmail.ru</a>
             </div>
         </div>
     </div>
@@ -209,6 +212,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220705123244"></script>
+    <script src="js/app.min.js?_v=20220706104024"></script>
 </body>
 </html>

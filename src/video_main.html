@@ -10,14 +10,18 @@
 </head>
 <body class="bredPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
+        @@include('blocks/modules/header/header.html', {
+            "type" : "search",
+        })
         <main class="content center_block">
             @@include('blocks/modules/top_module/top_module.html', {
                 "type" : "",
             })
             <div class="bottom_module">
                 <div class="bottom_module__l-side">
-                    @@include('blocks/components/l_block/l_block.html', {})
+                    @@include('blocks/components/l_block/l_block.html', {
+                        "type" : "",
+                    })
                 </div>
                 <div class="bottom_module__r-side">
                     @@include('blocks/modules/video_main/video_main.html', {})

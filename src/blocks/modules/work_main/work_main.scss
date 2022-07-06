@@ -1,5 +1,5 @@
 .menu_page {
-    @media all and (max-width: 1520px) {
+    @media all and (max-width: 1024px) {
         .work_bl {
             &__l-side {
                 display: block !important;
@@ -48,7 +48,7 @@
         width: 335px;
         border-radius: 0 0 0 10px;
         overflow: hidden;
-        @media all and (max-width: 1520px) {
+        @media all and (max-width: 1024px) {
             display: none;
         }
     }
@@ -194,6 +194,7 @@
         padding-bottom: 17px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         justify-content: space-between;
     }
     &__name {

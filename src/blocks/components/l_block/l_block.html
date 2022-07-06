@@ -1,11 +1,36 @@
-<div class="l_block">
+<div class="l_block@@if (type === 'calendar') { block_calend}">
     <div class="l_block__title">Информация</div>
     <nav class="l_block__menu">
         <ul>
-            <li><a href="#">Новости администрации</a></li>
+            <li><a href="#" class="isActive">Новости администрации</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Объявления</a></li>
             <li><a href="#">События</a></li>
         </ul>
     </nav>
+    @@if (type === 'calendar') {
+        <div class="calendar_block">
+            <div class="calendar_block__tit">Календарь</div>
+            <div class="calendar_block__top">
+                <div class="date_block" data-date="04/06/2022"></div>
+            </div>
+            <div class="calendar_block__bottom">
+                <div class="calendar_block__slider sl_js">
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">1Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">2Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">3Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                </div>
+                <a href="#" class="calendar_block__more">Все события</a>
+            </div>
+        </div>
+    }
 </div>

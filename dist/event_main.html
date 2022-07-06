@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура компании</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220705123244">
+    <link rel="stylesheet" href="css/style.css?_v=20220706104024">
 </head>
 <body class="bredPage">
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -111,15 +111,17 @@
                 <a href="#" class="user_h__link">Выйти</a>
             </div>
         </div>
-        <div class="search_h">
-            <div class="search_h__icon"></div>
-            <div class="search_h__body">
-                <div class="search_h__close"></div>
-                <form action="" class="search_h__search">
-                    <input type="search" name="Поиск по разделу" id="">
-                </form>
+        
+            <div class="search_h">
+                <div class="search_h__icon"></div>
+                <div class="search_h__body">
+                    <div class="search_h__close"></div>
+                    <form action="" class="search_h__search">
+                        <input type="search" name="Поиск по разделу" id="">
+                    </form>
+                </div>
             </div>
-        </div>
+        
         <div class="alert_h">
             <div class="alert_h__icon"></div>
             <div class="alert_h__body"></div>
@@ -145,16 +147,41 @@
 </div>
             <div class="bottom_module">
                 <div class="bottom_module__l-side">
-                    <div class="l_block">
+                    <div class="l_block block_calend">
     <div class="l_block__title">Информация</div>
     <nav class="l_block__menu">
         <ul>
-            <li><a href="#">Новости администрации</a></li>
+            <li><a href="#" class="isActive">Новости администрации</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Объявления</a></li>
             <li><a href="#">События</a></li>
         </ul>
     </nav>
+    
+        <div class="calendar_block">
+            <div class="calendar_block__tit">Календарь</div>
+            <div class="calendar_block__top">
+                <div class="date_block" data-date="04/06/2022"></div>
+            </div>
+            <div class="calendar_block__bottom">
+                <div class="calendar_block__slider sl_js">
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">1Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">2Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                    <div class="calendar_block__block">
+                        <div class="calendar_block__date">22.08.2022</div>
+                        <a href="#" class="calendar_block__title">3Концерт легендарной американской  группы Imagine Dragons, в рамках европейского тура Mercury World Tour.</a>
+                    </div>
+                </div>
+                <a href="#" class="calendar_block__more">Все события</a>
+            </div>
+        </div>
+    
 </div>
                 </div>
                 <div class="bottom_module__r-side">
@@ -341,6 +368,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220705123244"></script>
+    <script src="js/app.min.js?_v=20220706104024"></script>
 </body>
 </html>

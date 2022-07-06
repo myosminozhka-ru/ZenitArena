@@ -99,15 +99,17 @@
                 <a href="#" class="user_h__link">Выйти</a>
             </div>
         </div>
-        <div class="search_h">
-            <div class="search_h__icon"></div>
-            <div class="search_h__body">
-                <div class="search_h__close"></div>
-                <form action="" class="search_h__search">
-                    <input type="search" name="Поиск по разделу" id="">
-                </form>
+        @@if (type === 'search') {
+            <div class="search_h">
+                <div class="search_h__icon"></div>
+                <div class="search_h__body">
+                    <div class="search_h__close"></div>
+                    <form action="" class="search_h__search">
+                        <input type="search" name="Поиск по разделу" id="">
+                    </form>
+                </div>
             </div>
-        </div>
+        }
         <div class="alert_h">
             <div class="alert_h__icon"></div>
             <div class="alert_h__body"></div>

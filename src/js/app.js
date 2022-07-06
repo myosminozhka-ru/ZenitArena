@@ -78,6 +78,18 @@ $(document).ready(function () {
             $('.burger__body').removeClass('isActive');
         })
     });
+    $(document).keydown(function(event){
+        if (event.which == 27) {
+            $('html').removeClass('owh');
+            $('.burger__icon').removeClass('isActive');
+            $('.burger__close').removeClass('isActive');
+            $('.burger__body').removeClass('isActive');
+            $('.user_h').removeClass('isActive');
+            $('.header').removeClass('isActive');
+            $('.user_h').removeClass('isActive');
+            $('.owf_block').removeClass('isActive');
+        }
+    });
 
     $('.user_h__icon').on('click', function() {
         $('.owf_block').toggleClass('isActive');
@@ -187,12 +199,16 @@ $(function() {
             $('.aside_r__item').prepend($('.news_block__item .news_block:nth-child(2)'));
         }  
 
-    
         if (window.matchMedia("(max-width: 1330px)").matches) {
-            $('.news_bl__top').append($('.red_bl .news_bl__info'));
+            $('.news_block__item').append($('.aside_r__item .news_block'));
         }
-        if (window.matchMedia("(max-width: 1024px)").matches) {
-            $('.red_bl').prepend($('.news_bl__info'));
+    
+        if (window.matchMedia("(min-width: 1023px)").matches) {
+            $('.l_block.block_calend').prepend($('.event_bl_m .calendar_block'));
+        }    
+
+        if (window.matchMedia("(max-width: 1023px)").matches) {
+            $('.event_bl_m').prepend($('.l_block.block_calend .calendar_block'));
         }
     });
     $(window).trigger('resize');
@@ -221,13 +237,14 @@ $(function() {
         ]
     });    
     
-    $('.work_bl__close').on('click', function() {
+    $('.work_bl__top').on('click', function() {
         $(this).parents('.work_bl__block').find('.cards_bl').toggleClass('isActive').slideToggle();
         $(this).toggleClass('isActive');
-        if ($(this).hasClass('isActive')) {
-            $(this).text('Свернуть');
+        $(this).find('.work_bl__close').toggleClass('isActive');
+        if ($('.work_bl__close').hasClass('isActive')) {
+            $(this).find('.work_bl__close').text('Свернуть');
         } else {
-            $(this).text('Подробнее');
+            $(this).find('.work_bl__close').text('Подробнее');
         }
     });
 
