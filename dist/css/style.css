@@ -390,7 +390,6 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
@@ -771,20 +770,6 @@ template {
 @font-face {
   font-family: "HeliosC";
   font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosCompressedC";
-  font-display: swap;
-  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
   src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
   font-weight: 700;
 }
@@ -797,16 +782,23 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondBlackC";
+  font-family: "HeliosC";
   font-display: swap;
-  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosCondLightC";
+  font-family: "HeliosCompressedC";
   font-display: swap;
-  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondBlackC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondBlackC.woff2") format("woff2"), url("../fonts/HeliosCondBlackC.woff") format("woff"), url("../fonts/HeliosCondBlackC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -821,6 +813,13 @@ template {
   font-family: "HeliosCondC";
   font-display: swap;
   src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosCondLightC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -867,6 +866,13 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosExtThinC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtThinC.woff2") format("woff2"), url("../fonts/HeliosExtThinC.woff") format("woff"), url("../fonts/HeliosExtThinC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "HeliosLightC";
   font-display: swap;
   src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
@@ -884,13 +890,6 @@ template {
   font-family: "HeliosThinC";
   font-display: swap;
   src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosExtThinC";
-  font-display: swap;
-  src: url("../fonts/HeliosExtThinC.woff2") format("woff2"), url("../fonts/HeliosExtThinC.woff") format("woff"), url("../fonts/HeliosExtThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -1025,7 +1024,6 @@ textarea {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -2067,10 +2065,6 @@ textarea {
   color: #B6B6C6;
 }
 
-.isTablet .search_h__search input[type=search]:-ms-input-placeholder, .isMobile .search_h__search input[type=search]:-ms-input-placeholder {
-  color: #B6B6C6;
-}
-
 .isTablet .search_h__search input[type=search]::placeholder,
 .isMobile .search_h__search input[type=search]::placeholder {
   color: #B6B6C6;
@@ -3017,11 +3011,6 @@ textarea {
 }
 
 .top_module .search_block input[type=text]::-moz-placeholder {
-  color: #B6B6C6;
-  font-size: 27px;
-}
-
-.top_module .search_block input[type=text]:-ms-input-placeholder {
   color: #B6B6C6;
   font-size: 27px;
 }
@@ -4734,7 +4723,6 @@ textarea {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   font-family: "HeliosC", serif;
   font-style: normal;
@@ -4829,10 +4817,6 @@ textarea {
 }
 
 .auth_block__form input[type=password]::-moz-placeholder {
-  letter-spacing: normal;
-}
-
-.auth_block__form input[type=password]:-ms-input-placeholder {
   letter-spacing: normal;
 }
 
