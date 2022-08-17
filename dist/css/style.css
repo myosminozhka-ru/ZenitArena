@@ -775,6 +775,20 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "HeliosCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
@@ -789,13 +803,6 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "HeliosCondC";
   font-display: swap;
   src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
@@ -803,16 +810,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondLightC";
+  font-family: "HeliosCondC";
   font-display: swap;
-  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosCondC";
+  font-family: "HeliosCondLightC";
   font-display: swap;
-  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
+  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -828,13 +835,6 @@ template {
   font-display: swap;
   src: url("../fonts/HeliosExtBlackC.woff2") format("woff2"), url("../fonts/HeliosExtBlackC.woff") format("woff"), url("../fonts/HeliosExtBlackC.ttf") format("ttf");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-  font-weight: 700;
 }
 
 @font-face {
@@ -873,16 +873,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosThinC";
+  font-family: "HeliosLightC";
   font-display: swap;
-  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
+  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosLightC";
+  font-family: "HeliosThinC";
   font-display: swap;
-  src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosThinC.woff2") format("woff2"), url("../fonts/HeliosThinC.woff") format("woff"), url("../fonts/HeliosThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -6604,6 +6604,364 @@ textarea {
   left: 2px;
 }
 
+.gover_page {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.gover__blocks__block {
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  padding: 28px;
+}
+
+.gover__blocks__block:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.gover__blocks__l-side {
+  margin-right: 25px;
+  flex: 0 0 158px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 158px;
+  height: 209px;
+}
+
+.gover__blocks__l-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gover__blocks__r-side {
+  width: 100%;
+}
+
+.gover__blocks__info {
+  background: #F7FAFB;
+  border-radius: 10px 0px 0px 10px;
+  padding: 24px 18px;
+  width: calc(100% + 28px);
+  margin-right: -28px;
+  margin-bottom: 16px;
+}
+
+.gover__blocks__stage {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #9797A5;
+  margin-bottom: 2px;
+}
+
+.gover__blocks__name {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #131313;
+}
+
+.gover__blocks__text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #131313;
+}
+
+.history_page {
+  margin-bottom: 40px;
+}
+
+.history_block {
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  border-top: 32px solid #006FAB;
+}
+
+.history_block__history {
+  padding: 32px 28px;
+  background: #F7FAFB;
+  display: flex;
+  align-items: center;
+}
+
+.history_block__history--l-side {
+  width: 100%;
+}
+
+.history_block__history--title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  color: #131313;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.history_block__history--text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #9797A5;
+}
+
+.history_block__history--r-side {
+  margin-left: 40px;
+  flex: 0 0 378px;
+  width: 378px;
+  box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.history_block__history--r-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.history_block__text {
+  padding: 24px 28px;
+}
+
+.history_block__text--block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.history_block__text--l-side {
+  flex: 0 0 432px;
+  margin-right: 40px;
+  width: 432px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.history_block__text--l-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.history_block__text--r-side {
+  width: 100%;
+}
+
+.history_block__text--r-side .history_block__text--title {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.history_block__text--r-side .history_block__text--text {
+  font-size: 18px;
+}
+
+.history_block__text--title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #131313;
+  margin-bottom: 12px;
+}
+
+.history_block__text--text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #131313;
+}
+
+.history_block__text--text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history_block__text--text ul li {
+  position: relative;
+  padding-left: 20px;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #131313;
+  margin-bottom: 12px;
+}
+
+.history_block__text--text ul li:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 4px;
+  left: 0;
+  background: #006FAB;
+}
+
+.history_block__text--img {
+  box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
+  border-radius: 10px;
+  font-size: 0;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.history_block__text--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.history_block__dates {
+  padding: 24px 28px;
+  background: #F7FAFB;
+}
+
+.history_block__dates--title {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #131313;
+  margin-bottom: 32px;
+}
+
+.history_block__dates--block {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.history_block__dates--block:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.history_block__dates--l-side {
+  width: 140px;
+  margin-right: 14px;
+  flex: 0 0 140px;
+}
+
+.history_block__dates--l-side span {
+  display: inline-block;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #9797A5;
+  margin-bottom: 8px;
+}
+
+.history_block__dates--date {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #131313;
+}
+
+.history_block__dates--r-side {
+  width: 100%;
+}
+
+.history_block__dates--r-side span {
+  display: inline-block;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #9797A5;
+  margin-bottom: 8px;
+}
+
+.history_block__dates--text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #131313;
+}
+
+.history_block__dates--text p:first-child {
+  margin-top: 0;
+}
+
+.history_block__dates--text b {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #131313;
+}
+
+.history_block__dates--text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.history_block__dates--text ul li {
+  position: relative;
+  padding-left: 20px;
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #131313;
+  margin-bottom: 12px;
+}
+
+.history_block__dates--text ul li:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 4px;
+  left: 0;
+  background: #006FAB;
+}
+
 .footer {
   display: flex;
   align-items: flex-end;
@@ -6894,6 +7252,138 @@ textarea {
   .inPage {
     background: #fff;
   }
+
+  .gover_page {
+    margin-bottom: 0;
+  }
+
+  .gover__blocks__block {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .gover__blocks__l-side {
+    margin-right: 0;
+    margin-bottom: 16px;
+    flex: none;
+  }
+
+  .gover__blocks__info {
+    width: calc(100% + 16px);
+    margin-right: -16px;
+    padding: 16px;
+  }
+
+  .gover__blocks__name {
+    font-size: 16px;
+  }
+
+  .gover__blocks__text {
+    font-size: 14px;
+  }
+
+  .history_page {
+    margin-bottom: 0;
+  }
+
+  .history_block {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0;
+    border-width: 20px;
+  }
+
+  .history_block__history {
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+
+  .history_block__history--title {
+    font-size: 26px;
+  }
+
+  .history_block__history--text {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .history_block__history--r-side {
+    flex: none;
+    height: 201px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 24px;
+    position: relative;
+    padding-top: 50%;
+  }
+
+  .history_block__history--r-side img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .history_block__text {
+    padding: 24px 20px;
+  }
+
+  .history_block__text--block {
+    flex-direction: column-reverse;
+  }
+
+  .history_block__text--l-side {
+    width: 100%;
+    margin-top: 24px;
+    margin-right: 0;
+    flex: none;
+  }
+
+  .history_block__text--r-side .history_block__text--title {
+    font-size: 26px;
+  }
+
+  .history_block__text--r-side .history_block__text--text {
+    font-size: 16px;
+  }
+
+  .history_block__text--title {
+    font-size: 18px;
+  }
+
+  .history_block__text--text {
+    font-size: 14px;
+  }
+
+  .history_block__dates {
+    padding: 24px 22px;
+  }
+
+  .history_block__dates--title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .history_block__dates--block {
+    flex-direction: column;
+  }
+
+  .history_block__dates--block:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .history_block__dates--l-side {
+    margin-bottom: 24px;
+    margin-right: 0;
+    width: 100%;
+    flex: none;
+  }
+
+  .history_block__dates--date {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -6903,6 +7393,16 @@ textarea {
 
   .r-tabs .r-tabs-accordion-title {
     display: block;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .history_block__text--l-side {
+    height: 201px;
+  }
+
+  .history_block__text--img {
+    height: 201px;
   }
 }
 
