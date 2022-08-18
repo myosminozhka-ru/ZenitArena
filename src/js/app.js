@@ -316,3 +316,30 @@ window.app = new Vue({
         }
     }
 });
+$(function(){
+    $('.day.selected').click(function() {
+        $(this).parents('.date_block').find('.form-wrapper').addClass('opened');
+        return false;
+        $('.sl_js').slick({
+            dots: true,
+            arrows: true,
+            swipe: false,
+            infinite: false
+        });
+    });
+    $('.form-wrapper .icon-close').click(function() {
+        $('.form-wrapper').removeClass('opened');
+        return false;
+    });
+    $(document).click( function(event){
+        if( $(event.target).closest('.form-wrapper-inner').length ) 
+          return;
+        $('.form-wrapper').removeClass('opened');
+        event.stopPropagation();
+    })
+    $(document).keydown(function(event){
+        if (event.which == 27) {
+            $('.form-wrapper').removeClass('opened');
+        }
+    });
+});
