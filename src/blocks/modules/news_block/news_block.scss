@@ -360,6 +360,7 @@
         background: #00B0DE;
         border-radius: 10px;
         padding: 4px 12px;
+        margin-right: 10px;
     }
     &__write {
         font-family: 'HeliosC', serif;
@@ -371,6 +372,7 @@
         text-decoration: none;
         position: relative;
         padding-left: 32px;
+        margin-left: auto;
         &:before {
             content: '';
             top: 50%;
