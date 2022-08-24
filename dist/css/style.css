@@ -775,23 +775,9 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
   font-family: "HeliosCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -803,10 +789,24 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondC";
+  font-family: "HeliosC";
   font-display: swap;
-  src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosCondLightC";
+  font-display: swap;
+  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -817,10 +817,10 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondLightC";
+  font-family: "HeliosCondC";
   font-display: swap;
-  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -845,16 +845,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosExtC";
+  font-family: "HeliosExtLightC";
   font-display: swap;
-  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosExtLightC";
+  font-family: "HeliosExtC";
   font-display: swap;
-  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -3513,6 +3513,13 @@ textarea {
   font-size: 0;
 }
 
+.red_bl__l-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .red_bl__r-side {
   width: calc(58% - 40px);
 }
@@ -3745,6 +3752,11 @@ textarea {
   overflow: hidden;
 }
 
+.bx-breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
 .news_bl_docs {
   margin-left: -28px;
   margin-right: -28px;
@@ -3780,6 +3792,8 @@ textarea {
   letter-spacing: 0.01em;
   color: #131313;
   margin-bottom: 4px;
+  text-decoration: none;
+  display: block;
 }
 
 .news_bl_docs__opt {
@@ -4081,7 +4095,6 @@ textarea {
   margin-bottom: 24px;
   padding: 0px 20px;
   background: #F7FAFB;
-  margin-top: 16px;
   padding-right: 0;
   margin-right: -28px;
   width: calc(100% + 28px);
@@ -4091,6 +4104,13 @@ textarea {
 .event_bl__l-side {
   display: flex;
   align-items: center;
+}
+
+.event_bl__l-side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .event_bl__number {
@@ -5243,7 +5263,7 @@ textarea {
 
 .lib_main .news_bl_docs__block {
   background: #fff;
-  align-items: flex-start;
+  align-items: flex-center;
 }
 
 .isTablet .lib_main__top,

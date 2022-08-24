@@ -77,6 +77,11 @@
         border-radius: 10px;
         overflow: hidden;
         font-size: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &__r-side {
         width: calc(100% - 42% - 40px);
@@ -288,6 +293,10 @@
         }
     }
 }
+.bx-breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
 .news_bl_docs {
     margin-left: -28px;
     margin-right: -28px;
@@ -317,6 +326,8 @@
         letter-spacing: 0.01em;
         color: #131313;
         margin-bottom: 4px;
+        text-decoration: none;
+        display: block;
     }
     &__opt {
         display: flex;
