@@ -1,149 +1,156 @@
 .event_bl_m {
-    &__top {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 24px;
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  &__button {
+    border: 0;
+    font-family: "HeliosC", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #f7f7f7;
+    transition: all 0.3s ease-out;
+    margin-right: 10px;
+    padding: 4px 12px;
+    background: #b6b6c6;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background: #00b0de;
     }
-    &__button {
+    &.isActive {
+      background: #00b0de;
+    }
+  }
+  &__blocks {
+    margin-bottom: 32px;
+  }
+  &__block {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 10px;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &.no_img {
+      .event_bl_m__l-side {
+        display: none;
+      }
+    }
+  }
+  &__l-side {
+    margin-right: 24px;
+    flex: 0 0 300px;
+    height: 190px;
+    font-size: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__r-side {
+    width: 100%;
+  }
+  &__text {
+    font-family: "HeliosC", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #131313;
+  }
+  &__txt {
+    display: none;
+  }
+}
+.isTablet,
+.isMobile {
+  .event_bl_m {
+    display: flex;
+    flex-direction: column;
+    &__top {
+      margin-bottom: 16px;
+      order: 1;
+    }
+    .calendar_block {
+      height: auto;
+      order: 2;
+      padding: 0;
+      background: none;
+      margin-bottom: 12px;
+      background: #ffffff;
+      box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
+      border-radius: 10px;
+      padding: 12px;
+      padding-top: 16px;
+      &__tit {
+        display: block;
+        font-size: 18px;
+      }
+      &__top {
+        display: block;
+      }
+      &__bottom {
+        display: none;
+      }
+      .date_block {
+        padding: 0;
+        margin: 0;
         border: 0;
-        font-family: 'HeliosC', serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 150%;
-        color: #F7F7F7;
-        transition: all .3s ease-out;
-        margin-right: 10px;
-        padding: 4px 12px;
-        background: #B6B6C6;
-        margin-bottom: 8px;
-        border-radius: 10px;
-        cursor: pointer;
-        &:hover {
-            background: #00B0DE;
-        }
-        &.isActive {
-            background: #00B0DE;
-        }
+      }
     }
     &__blocks {
-        margin-bottom: 32px;
+      order: 3;
+    }
+    .pages_bl {
+      order: 4;
     }
     &__block {
-        display: flex;
-        align-items: flex-start;
-        text-decoration: none;
-        padding: 28px;
-        background: #FFFFFF;
-        border-radius: 10px;
-        &:not(:last-child) {
-            margin-bottom: 12px;
-        }
+      flex-direction: column;
+      padding: 16px;
     }
     &__l-side {
-        margin-right: 24px;
-        flex: 0 0 300px;
-        height: 190px;
-        font-size: 0;
-        border-radius: 10px;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &__r-side {
-        width: 100%;
+      margin-right: 0;
+      flex: none;
+      width: 100%;
+      height: 180px;
     }
     &__text {
-        font-family: 'HeliosC', serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 140%;
-        color: #131313;
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 145%;
+    }
+    .event_bl__top {
+      width: calc(100% + 32px);
+      margin-left: -16px !important;
+      margin-right: -16px !important;
     }
     &__txt {
-        display: none;
+      display: block;
+      margin-top: 16px;
+      text-align: left;
+      font-family: "HeliosC", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      color: #9797a5;
     }
-}
-.isTablet, .isMobile {
-    .event_bl_m {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            margin-bottom: 16px;
-            order: 1;
-        }
-        .calendar_block {
-            height: auto;
-            order: 2;
-            padding: 0;
-            background: none;
-            margin-bottom: 12px;
-            background: #FFFFFF;
-            box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
-            border-radius: 10px;
-            padding: 12px;
-            padding-top: 16px;
-            &__tit {
-                display: block;
-                font-size: 18px;
-            }
-            &__top {
-                display: block;
-            }
-            &__bottom {
-                display: none;
-            }
-            .date_block {
-                padding: 0;
-                margin: 0;
-                border: 0;
-            }
-        }
-        &__blocks {
-            order: 3;
-        }
-        .pages_bl {
-            order: 4;
-        }
-        &__block {
-            flex-direction: column;
-            padding: 16px;
-        }
-        &__l-side {
-            margin-right: 0;
-            flex: none;
-            width: 100%;
-            height: 180px;
-        }
-        &__text {
-            margin-top: 8px;
-            font-size: 16px;
-            line-height: 145%;
-        }
-        .event_bl__top {
-            width: calc(100% + 32px);
-            margin-left: -16px !important;
-            margin-right: -16px !important;
-        }
-        &__txt {
-            display: block;
-            margin-top: 16px;
-            text-align: left;
-            font-family: 'HeliosC', serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 140%;
-            letter-spacing: 0.01em;
-            color: #9797A5;
-        }
-        .event_bl__text:not(:last-child) {
-            margin-bottom: 4px;
-        }
+    .event_bl__text:not(:last-child) {
+      margin-bottom: 4px;
     }
+  }
 }

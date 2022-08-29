@@ -775,6 +775,20 @@ template {
 }
 
 @font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HeliosC";
+  font-display: swap;
+  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "HeliosCompressedC";
   font-display: swap;
   src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
@@ -789,24 +803,10 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosC";
+  font-family: "HeliosCondC";
   font-display: swap;
-  src: url("../fonts/HeliosC.woff2") format("woff2"), url("../fonts/HeliosC.woff") format("woff"), url("../fonts/HeliosC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosC";
-  font-display: swap;
-  src: url("../fonts/HeliosC-Bold.woff2") format("woff2"), url("../fonts/HeliosC-Bold.woff") format("woff"), url("../fonts/HeliosC-Bold.ttf") format("ttf");
+  src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
   font-weight: 700;
-}
-
-@font-face {
-  font-family: "HeliosCondLightC";
-  font-display: swap;
-  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
-  font-weight: 400;
 }
 
 @font-face {
@@ -817,10 +817,10 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosCondC";
+  font-family: "HeliosCondLightC";
   font-display: swap;
-  src: url("../fonts/HeliosCondC-Bold.woff2") format("woff2"), url("../fonts/HeliosCondC-Bold.woff") format("woff"), url("../fonts/HeliosCondC-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/HeliosCondLightC.woff2") format("woff2"), url("../fonts/HeliosCondLightC.woff") format("woff"), url("../fonts/HeliosCondLightC.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -845,16 +845,16 @@ template {
 }
 
 @font-face {
-  font-family: "HeliosExtLightC";
+  font-family: "HeliosExtC";
   font-display: swap;
-  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosExtC";
+  font-family: "HeliosExtLightC";
   font-display: swap;
-  src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
+  src: url("../fonts/HeliosExtLightC.woff2") format("woff2"), url("../fonts/HeliosExtLightC.woff") format("woff"), url("../fonts/HeliosExtLightC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -3099,22 +3099,22 @@ textarea {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #F7F7F7;
+  color: #f7f7f7;
   transition: all 0.3s ease-out;
   margin-right: 10px;
   padding: 4px 12px;
-  background: #B6B6C6;
+  background: #b6b6c6;
   margin-bottom: 8px;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .news_m_bl__button:hover {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .news_m_bl__button.isActive {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .news_m_bl__blocks {
@@ -3125,13 +3125,17 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
   padding: 28px;
 }
 
 .news_m_bl__block:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.news_m_bl__block.no_img .news_m_bl__l-side {
+  display: none;
 }
 
 .news_m_bl__l-side {
@@ -3166,7 +3170,7 @@ textarea {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #9797A5;
+  color: #9797a5;
 }
 
 .news_m_bl__name {
@@ -3178,7 +3182,7 @@ textarea {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #9797A5;
+  color: #9797a5;
 }
 
 .news_m_bl__follow {
@@ -3188,7 +3192,7 @@ textarea {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #9797A5;
+  color: #9797a5;
   position: relative;
   padding-right: 26px;
   text-decoration: none;
@@ -3238,7 +3242,7 @@ textarea {
   align-items: center;
   padding: 0;
   margin: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px 0px 0px 10px;
   margin-bottom: 32px;
   padding: 0px 40px;
@@ -3250,7 +3254,7 @@ textarea {
   position: absolute;
   right: -1000px;
   width: 1000px;
-  background: #FFFFFF;
+  background: #ffffff;
   height: 100%;
   top: 0;
   bottom: 0;
@@ -3274,8 +3278,8 @@ textarea {
 }
 
 .review__btn.isActive {
-  color: #006FAB;
-  border-color: #006FAB;
+  color: #006fab;
+  border-color: #006fab;
 }
 
 .review__block {
@@ -5967,22 +5971,22 @@ textarea {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #F7F7F7;
+  color: #f7f7f7;
   transition: all 0.3s ease-out;
   margin-right: 10px;
   padding: 4px 12px;
-  background: #B6B6C6;
+  background: #b6b6c6;
   margin-bottom: 8px;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .ad_main_bl__button:hover {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .ad_main_bl__button.isActive {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .ad_main_bl__blocks {
@@ -5993,7 +5997,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
   padding: 28px;
   text-decoration: none;
@@ -6001,6 +6005,10 @@ textarea {
 
 .ad_main_bl__block:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.ad_main_bl__block.no_img .ad_main_bl__l-side {
+  display: none;
 }
 
 .ad_main_bl__l-side {
@@ -6030,7 +6038,7 @@ textarea {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #9797A5;
+  color: #9797a5;
 }
 
 .ad_main_bl__title {
@@ -6103,22 +6111,22 @@ textarea {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #F7F7F7;
+  color: #f7f7f7;
   transition: all 0.3s ease-out;
   margin-right: 10px;
   padding: 4px 12px;
-  background: #B6B6C6;
+  background: #b6b6c6;
   margin-bottom: 8px;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .event_bl_m__button:hover {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .event_bl_m__button.isActive {
-  background: #00B0DE;
+  background: #00b0de;
 }
 
 .event_bl_m__blocks {
@@ -6130,12 +6138,16 @@ textarea {
   align-items: flex-start;
   text-decoration: none;
   padding: 28px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
 }
 
 .event_bl_m__block:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.event_bl_m__block.no_img .event_bl_m__l-side {
+  display: none;
 }
 
 .event_bl_m__l-side {
@@ -6190,7 +6202,7 @@ textarea {
   padding: 0;
   background: none;
   margin-bottom: 12px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 176, 222, 0.08);
   border-radius: 10px;
   padding: 12px;
@@ -6269,7 +6281,7 @@ textarea {
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.01em;
-  color: #9797A5;
+  color: #9797a5;
 }
 
 .isTablet .event_bl_m .event_bl__text:not(:last-child),
