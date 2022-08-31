@@ -367,17 +367,6 @@ $(function () {
       $(".form-wrapper").removeClass("opened");
     }
   });
-
-  $.each(
-    $(".news_m_bl__block, .event_bl_m__block, .ad_main_bl__block"),
-    function (index, item) {
-      const objImg = new Image();
-      const findImg = $(item).find("img");
-      objImg.src = findImg.attr("src");
-      objImg.onerror = function () {
-        $(item).addClass("no_img");
-      };
-    }
-  );
+  
   initFancybox()
 });
