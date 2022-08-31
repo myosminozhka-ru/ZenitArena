@@ -10,6 +10,9 @@ import ru from "vanillajs-datepicker/locales/ru";
 
 import TabsBlock from "../blocks/modules/news_main/news_main.js";
 // import Modals from '../blocks/modules/modals/modals.js';
+import initFancybox from './modules/initFancybox.js';
+
+window.jQuery = $
 $(document).ready(function () {
   var slideEl = $(".review__block");
   var slideBt = $(".review__btn");
@@ -376,4 +379,5 @@ $(function () {
       };
     }
   );
+  initFancybox()
 });
