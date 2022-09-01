@@ -192,6 +192,11 @@
             }
         }
     }
+    .datepicker-cell.disabled {
+        background-color: #006FAB;
+        color: #fff !important;
+        cursor: pointer !important;
+    }
     &__date {
         font-family: 'HeliosC', serif;
         font-style: normal;
@@ -312,6 +317,9 @@
             pointer-events: none;
         }
     }
+}
+.calendar_block__top {
+  margin-bottom: 30px;
 }
 .isTablet, .isMobile {
     .aside_l {

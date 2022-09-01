@@ -10,6 +10,10 @@ import ru from "vanillajs-datepicker/locales/ru";
 
 import TabsBlock from "../blocks/modules/news_main/news_main.js";
 // import Modals from '../blocks/modules/modals/modals.js';
+import initFancybox from './modules/initFancybox.js';
+
+window.jQuery = $
+window.$ = $
 $(document).ready(function () {
   var slideEl = $(".review__block");
   var slideBt = $(".review__btn");
@@ -56,6 +60,34 @@ $(document).ready(function () {
       language: "ru",
     });
   });
+
+  document.querySelectorAll(".dates_block[data-dates]").forEach((item) => {
+    const dates = item.dataset.dates.split(', ')
+    const datepicker = new Datepicker(item, {
+      language: "ru",
+      maxNumberOfDates: dates.length,
+      datesDisabled: dates
+    });
+    item.addEventListener('click', function (e) {
+      if (!e.target.dataset.date) return;
+      console.log(e.target.dataset.date)
+      const date = new Date(+e.target.dataset.date);
+      const day = date.getDate();
+      const dayPretty = day < 10 ? '0' + day : day;
+      const month = date.getMonth() + 1;
+      const monthPretty = month < 10 ? '0' + month : month;
+      const datePretty = dayPretty + '/' + monthPretty + '/' + date.getFullYear()
+      console.log('datePretty', datePretty)
+      $(".calendar_block__day").hide()
+      $(`.calendar_block__day[data-day-event='${datePretty}']`).show()
+      $('.sl_js').slick('refresh');
+    })
+  });
+
+  setTimeout(() => {
+    $(".calendar_block__day:not(:first-child)").hide()
+  }, 500)
+
 
   $(".burger__icon").on("click", function () {
     $("html").addClass("owh");
@@ -365,15 +397,5 @@ $(function () {
     }
   });
 
-  $.each(
-    $(".news_m_bl__block, .event_bl_m__block, .ad_main_bl__block"),
-    function (index, item) {
-      const objImg = new Image();
-      const findImg = $(item).find("img");
-      objImg.src = findImg.attr("src");
-      objImg.onerror = function () {
-        $(item).addClass("no_img");
-      };
-    }
-  );
+  initFancybox()
 });
