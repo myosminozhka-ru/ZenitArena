@@ -61,12 +61,31 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll(".dates_block[data-dates]").forEach((item) => {
+    const dates = item.dataset.dates.split(', ')
     const datepicker = new Datepicker(item, {
       language: "ru",
-      maxNumberOfDates: 100000
+      maxNumberOfDates: dates.length,
+      datesDisabled: dates
     });
-    datepicker.setDate( item.dataset.dates.split(', '))
+    item.addEventListener('click', function (e) {
+      if (!e.target.dataset.date) return;
+      console.log(e.target.dataset.date)
+      const date = new Date(+e.target.dataset.date);
+      const day = date.getDate();
+      const dayPretty = day < 10 ? '0' + day : day;
+      const month = date.getMonth() + 1;
+      const monthPretty = month < 10 ? '0' + month : month;
+      const datePretty = dayPretty + '/' + monthPretty + '/' + date.getFullYear()
+      console.log('datePretty', datePretty)
+      $(".calendar_block__day").hide()
+      $(`.calendar_block__day[data-day-event='${datePretty}']`).show()
+    })
   });
+
+  setTimeout(() => {
+    $(".calendar_block__day:not(:first-child)").hide()
+  }, 500)
+
 
   $(".burger__icon").on("click", function () {
     $("html").addClass("owh");

@@ -1603,9 +1603,9 @@ body.compensate-for-scrollbar {
 }
 
 @font-face {
-  font-family: "HeliosCondC";
+  font-family: "HeliosCompressedC";
   font-display: swap;
-  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
+  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -1617,17 +1617,17 @@ body.compensate-for-scrollbar {
 }
 
 @font-face {
-  font-family: "HeliosCompressedC";
+  font-family: "HeliosCondC";
   font-display: swap;
-  src: url("../fonts/HeliosCompressedC.woff2") format("woff2"), url("../fonts/HeliosCompressedC.woff") format("woff"), url("../fonts/HeliosCompressedC.ttf") format("ttf");
+  src: url("../fonts/HeliosCondC.woff2") format("woff2"), url("../fonts/HeliosCondC.woff") format("woff"), url("../fonts/HeliosCondC.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "HeliosCondThinC";
+  font-family: "HeliosExtC";
   font-display: swap;
-  src: url("../fonts/HeliosCondThinC.woff2") format("woff2"), url("../fonts/HeliosCondThinC.woff") format("woff"), url("../fonts/HeliosCondThinC.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -1640,21 +1640,7 @@ body.compensate-for-scrollbar {
 @font-face {
   font-family: "HeliosExtC";
   font-display: swap;
-  src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "HeliosExtC";
-  font-display: swap;
   src: url("../fonts/HeliosExtC.woff2") format("woff2"), url("../fonts/HeliosExtC.woff") format("woff"), url("../fonts/HeliosExtC.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "HeliosExtThinC";
-  font-display: swap;
-  src: url("../fonts/HeliosExtThinC.woff2") format("woff2"), url("../fonts/HeliosExtThinC.woff") format("woff"), url("../fonts/HeliosExtThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -1666,9 +1652,9 @@ body.compensate-for-scrollbar {
 }
 
 @font-face {
-  font-family: "HeliosExtraCompressedC";
+  font-family: "HeliosCondThinC";
   font-display: swap;
-  src: url("../fonts/HeliosExtraCompressedC.woff2") format("woff2"), url("../fonts/HeliosExtraCompressedC.woff") format("woff"), url("../fonts/HeliosExtraCompressedC.ttf") format("ttf");
+  src: url("../fonts/HeliosCondThinC.woff2") format("woff2"), url("../fonts/HeliosCondThinC.woff") format("woff"), url("../fonts/HeliosCondThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -1676,6 +1662,20 @@ body.compensate-for-scrollbar {
   font-family: "HeliosLightC";
   font-display: swap;
   src: url("../fonts/HeliosLightC.woff2") format("woff2"), url("../fonts/HeliosLightC.woff") format("woff"), url("../fonts/HeliosLightC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosExtraCompressedC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtraCompressedC.woff2") format("woff2"), url("../fonts/HeliosExtraCompressedC.woff") format("woff"), url("../fonts/HeliosExtraCompressedC.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HeliosExtThinC";
+  font-display: swap;
+  src: url("../fonts/HeliosExtThinC.woff2") format("woff2"), url("../fonts/HeliosExtThinC.woff") format("woff"), url("../fonts/HeliosExtThinC.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -3107,6 +3107,12 @@ textarea {
 .calendar_block .datepicker-view .days .datepicker-grid .datepicker-cell.selected {
   color: #fff;
   background: url("data:image/svg+xml,%3Csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.833252 18.5835C0.833252 8.64237 8.89213 0.583496 18.8333 0.583496V0.583496C28.7744 0.583496 36.8333 8.64237 36.8333 18.5835V18.5835C36.8333 28.5246 28.7744 36.5835 18.8333 36.5835V36.5835C8.89213 36.5835 0.833252 28.5246 0.833252 18.5835V18.5835Z' fill='%23006FAB'/%3E%3C/svg%3E%0A") 50% no-repeat;
+}
+
+.calendar_block .datepicker-cell.disabled {
+  background-color: #006FAB;
+  color: #fff !important;
+  cursor: pointer !important;
 }
 
 .calendar_block__date {
