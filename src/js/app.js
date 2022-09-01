@@ -13,6 +13,7 @@ import TabsBlock from "../blocks/modules/news_main/news_main.js";
 import initFancybox from './modules/initFancybox.js';
 
 window.jQuery = $
+window.$ = $
 $(document).ready(function () {
   var slideEl = $(".review__block");
   var slideBt = $(".review__btn");
@@ -79,6 +80,7 @@ $(document).ready(function () {
       console.log('datePretty', datePretty)
       $(".calendar_block__day").hide()
       $(`.calendar_block__day[data-day-event='${datePretty}']`).show()
+      $('.sl_js').slick('refresh');
     })
   });
 
