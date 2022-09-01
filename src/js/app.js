@@ -60,6 +60,14 @@ $(document).ready(function () {
     });
   });
 
+  document.querySelectorAll(".dates_block[data-dates]").forEach((item) => {
+    const datepicker = new Datepicker(item, {
+      language: "ru",
+      maxNumberOfDates: 100000
+    });
+    datepicker.setDate( item.dataset.dates.split(', '))
+  });
+
   $(".burger__icon").on("click", function () {
     $("html").addClass("owh");
     $(".burger__icon").addClass("isActive");
@@ -367,6 +375,6 @@ $(function () {
       $(".form-wrapper").removeClass("opened");
     }
   });
-  
+
   initFancybox()
 });
