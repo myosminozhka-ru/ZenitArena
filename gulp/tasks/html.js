@@ -12,7 +12,7 @@ export const html = () => {
         ))
         .pipe(fileInclude())
         .pipe(app.plugins.replace(/@img\//g, 'img/'))
-        .pipe(webpHtmlNosvg())
+        // .pipe(webpHtmlNosvg())
         .pipe(
             versionNumber({
                 'value': '%DT%',

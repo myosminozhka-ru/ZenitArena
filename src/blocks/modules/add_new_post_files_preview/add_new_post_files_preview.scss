@@ -1,0 +1,118 @@
+.add_new_post_files_preview {
+  font-family: "HeliosC", serif;
+  margin-bottom: 20px;
+}
+
+.add_new_post_files_preview__content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+.add_new_post_files_preview__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.add_new_post_files_preview__item_content {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  &--disabled {
+    opacity: .6;
+    border: 1px solid $red;
+  }
+
+  &.isMobile {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+}
+
+.add_new_post_files_preview__item_left,
+.add_new_post_files_preview__item_right {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  &.isMobile {
+    width: 100%;
+  }
+}
+
+.add_new_post_files_preview__item_left {
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.add_new_post_files_preview__item_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: $black;
+}
+
+.add_new_post_files_preview__item_right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -12px;
+  flex-grow: 1;
+}
+
+.add_new_post_files_preview__item_box {
+  width: calc(100% / 4 - 24px);
+  margin: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  &--disabled {
+    opacity: .6;
+    border: 1px solid $red;
+  }
+
+  &.isMobile {
+    flex-grow: 1;
+    min-width: 250px;
+  }
+}
+
+.add_new_post_files_preview__item_wrapper_img,
+.add_new_post_files_preview__item_wrapper_video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 63.1%;
+}
+
+.add_new_post_files_preview__item_img,
+.add_new_post_files_preview__item_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.add_new_post_files_preview__item_remove {
+  margin-left: auto;
+
+  &--absolute {
+    top: 4px;
+    right: 4px;
+    position: absolute;
+  }
+}
+
+.add_new_post_files_preview__item_play_video {
+  position: absolute;
+}

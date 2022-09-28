@@ -1,0 +1,159 @@
+.add_new_post {
+  position: relative;
+  z-index: 30;
+}
+
+.add_new_post__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  visibility: collapse;
+  z-index: 1;
+
+  &--show {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
+
+.add_new_post__bottom {
+  margin-top: 12px;
+}
+
+.add_new_post__content {
+  background-color: $white;
+  padding: 16px 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+
+  &.isMobile {
+    padding: 10px;
+  }
+
+  &--upload {
+    padding: 0;
+    border: 2px dashed $darkBlue;
+
+    &.isMobile {
+      padding: 0;
+    }
+  }
+
+  &--file-in-zone {
+    background-color: $mediumBlue;
+  }
+}
+
+.add_new_post__start_block {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add_new_post__wrapper_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 24px;
+}
+
+.add_new_post__img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.add_new_post__start_text {
+  font-family: "HeliosC", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  display: flex;
+  align-items: flex-end;
+  color: #B6B6C6;
+}
+
+.add_new_post__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add_new_post__form_input {
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.add_new_post__form_textarea {
+  min-height: 50px;
+  height: 50px;
+}
+
+.add_new_post__form_top {
+  margin-bottom: 16px;
+}
+
+.add_new_post__form_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.isMobile {
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+}
+
+.add_new_post__form_list {
+  display: flex;
+  align-items: center;
+
+  &.isMobile {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.add_new_post__form_add_file {
+  margin-right: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--cover {
+    &.isMobile {
+      margin-right: auto;
+    }
+  }
+
+  &--photo,
+  &--video,
+  &--document {
+    &.isMobile {
+      margin-right: 15px;
+
+      .btn__text {
+        display: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.add_new_post__form_btn {
+  &.isMobile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

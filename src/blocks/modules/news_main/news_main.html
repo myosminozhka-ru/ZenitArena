@@ -104,6 +104,224 @@
                         <button class="news_m_bl__button">Мероприятия</button>
                         <button class="news_m_bl__button">Развлечения</button>
                     </div>
+
+                    <div class="add_new_post news_m_bl__add_new_post">
+                        <div class="add_new_post__overlay" :class="[{'add_new_post__overlay--show': statusAddPost === 2}]" @click="backToAddPostForm"></div>
+                        <div class="add_new_post__top" :class="{isMobile, isTablet}">
+                            <div class="add_new_post__content"
+                                 :class="[{'add_new_post__content--upload': statusAddPost === 2}, {'add_new_post__content--file-in-zone': isFileInZone}, {isMobile, isTablet}]">
+                                <div class="add_new_post__start_block" v-if="statusAddPost === 0" @click="showAddNewPostForm">
+                                    <div class="add_new_post__wrapper_img" :class="{isMobile, isTablet}">
+                                        <img src="./img/avatar.png" alt="" class="add_new_post__img">
+                                    </div>
+                                    <span class="add_new_post__start_text" :class="{isMobile, isTablet}">Написать новость</span>
+                                </div>
+
+                                <form id="add_new_post_form" action="" class="add_new_post__form" v-else-if="statusAddPost === 1">
+                                    <div class="add_new_post__form_top">
+                                        <input class="add_new_post__form_field add_new_post__form_input" name="title" type="text" placeholder="Заголовок" :class="{isMobile, isTablet}" @focus="onFocusInputAndTextarea">
+                                        <input class="add_new_post__form_field add_new_post__form_input" name="description" type="text" placeholder="Описание" :class="{isMobile, isTablet}" @focus="onFocusInputAndTextarea">
+                                        <textarea class="add_new_post__form_field add_new_post__form_textarea" name="text" id="" cols="30" rows="10" placeholder="Текст" :class="{isMobile, isTablet}" @focus="onFocusInputAndTextarea"></textarea>
+                                    </div>
+
+                                    <div class="add_new_post__form_bottom" :class="{isMobile, isTablet}">
+                                        <div class="add_new_post__form_list" :class="{isMobile, isTablet}">
+                                        <span class="btn btn--transparent_file add_new_post__form_add_file add_new_post__form_add_file--cover" :class="{isMobile, isTablet}" @click="showUpload('cover')">
+                                            <span class="btn__content">
+                                                <svg class="btn__icon btn__icon--cover" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.828 18.5L2.808 18.52L2.787 18.5H0.992C0.728813 18.4997 0.476497 18.395 0.290489 18.2088C0.104482 18.0226 -1.33455e-07 17.7702 0 17.507V1.493C0.00183004 1.23038 0.1069 0.979017 0.292513 0.793218C0.478126 0.607418 0.72938 0.502095 0.992 0.5H19.008C19.556 0.5 20 0.945 20 1.493V17.507C19.9982 17.7696 19.8931 18.021 19.7075 18.2068C19.5219 18.3926 19.2706 18.4979 19.008 18.5H2.828ZM18 12.5V2.5H2V16.5L12 6.5L18 12.5ZM18 15.328L12 9.328L4.828 16.5H18V15.328ZM6 8.5C5.46957 8.5 4.96086 8.28929 4.58579 7.91421C4.21071 7.53914 4 7.03043 4 6.5C4 5.96957 4.21071 5.46086 4.58579 5.08579C4.96086 4.71071 5.46957 4.5 6 4.5C6.53043 4.5 7.03914 4.71071 7.41421 5.08579C7.78929 5.46086 8 5.96957 8 6.5C8 7.03043 7.78929 7.53914 7.41421 7.91421C7.03914 8.28929 6.53043 8.5 6 8.5Z" fill="currentColor"/>
+                                                </svg>
+
+                                                <span class="btn__text">Обложка</span>
+                                            </span>
+                                        </span>
+
+                                            <span class="btn btn--transparent_file add_new_post__form_add_file add_new_post__form_add_file--photo" :class="{isMobile, isTablet}" @click="showUpload('photo')">
+                                            <span class="btn__content">
+                                                <svg class="btn__icon btn__icon--photo" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.828 2.5L5.828 4.5H2V16.5H18V4.5H14.172L12.172 2.5H7.828ZM7 0.5H13L15 2.5H19C19.2652 2.5 19.5196 2.60536 19.7071 2.79289C19.8946 2.98043 20 3.23478 20 3.5V17.5C20 17.7652 19.8946 18.0196 19.7071 18.2071C19.5196 18.3946 19.2652 18.5 19 18.5H1C0.734784 18.5 0.48043 18.3946 0.292893 18.2071C0.105357 18.0196 0 17.7652 0 17.5V3.5C0 3.23478 0.105357 2.98043 0.292893 2.79289C0.48043 2.60536 0.734784 2.5 1 2.5H5L7 0.5ZM10 15.5C8.54131 15.5 7.14236 14.9205 6.11091 13.8891C5.07946 12.8576 4.5 11.4587 4.5 10C4.5 8.54131 5.07946 7.14236 6.11091 6.11091C7.14236 5.07946 8.54131 4.5 10 4.5C11.4587 4.5 12.8576 5.07946 13.8891 6.11091C14.9205 7.14236 15.5 8.54131 15.5 10C15.5 11.4587 14.9205 12.8576 13.8891 13.8891C12.8576 14.9205 11.4587 15.5 10 15.5ZM10 13.5C10.9283 13.5 11.8185 13.1313 12.4749 12.4749C13.1313 11.8185 13.5 10.9283 13.5 10C13.5 9.07174 13.1313 8.1815 12.4749 7.52513C11.8185 6.86875 10.9283 6.5 10 6.5C9.07174 6.5 8.1815 6.86875 7.52513 7.52513C6.86875 8.1815 6.5 9.07174 6.5 10C6.5 10.9283 6.86875 11.8185 7.52513 12.4749C8.1815 13.1313 9.07174 13.5 10 13.5Z" fill="currentColor"/>
+                                                </svg>
+
+                                                <span class="btn__text">Фото</span>
+                                            </span>
+                                        </span>
+
+                                            <span class="btn btn--transparent_file add_new_post__form_add_file add_new_post__form_add_file--video" :class="{isMobile, isTablet}" @click="showUpload('video')">
+                                            <span class="btn__content">
+                                                <svg class="btn__icon btn__icon--video" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 5.7L21.213 2.05C21.288 1.99746 21.3759 1.9665 21.4672 1.9605C21.5586 1.9545 21.6498 1.9737 21.731 2.01599C21.8122 2.05829 21.8802 2.12206 21.9276 2.20035C21.9751 2.27865 22.0001 2.36846 22 2.46V14.54C22.0001 14.6315 21.9751 14.7214 21.9276 14.7996C21.8802 14.8779 21.8122 14.9417 21.731 14.984C21.6498 15.0263 21.5586 15.0455 21.4672 15.0395C21.3759 15.0335 21.288 15.0025 21.213 14.95L16 11.3V15.5C16 15.7652 15.8946 16.0196 15.7071 16.2071C15.5196 16.3946 15.2652 16.5 15 16.5H1C0.734784 16.5 0.48043 16.3946 0.292893 16.2071C0.105357 16.0196 0 15.7652 0 15.5V1.5C0 1.23478 0.105357 0.98043 0.292893 0.792893C0.48043 0.605357 0.734784 0.5 1 0.5H15C15.2652 0.5 15.5196 0.605357 15.7071 0.792893C15.8946 0.98043 16 1.23478 16 1.5V5.7ZM16 8.859L20 11.659V5.34L16 8.14V8.858V8.859ZM2 2.5V14.5H14V2.5H2ZM4 4.5H6V6.5H4V4.5Z" fill="currentColor"/>
+                                                </svg>
+
+                                                <span class="btn__text">Видео</span>
+                                            </span>
+                                        </span>
+
+                                            <span class="btn btn--transparent_file add_new_post__form_add_file add_new_post__form_add_file--document" :class="{isMobile, isTablet}" @click="showUpload('document')">
+                                            <span class="btn__content">
+                                                <svg class="btn__icon btn__icon--document" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18 6.5V19.493C18.0009 19.6243 17.976 19.7545 17.9266 19.8762C17.8772 19.9979 17.8043 20.1087 17.7121 20.2022C17.6199 20.2957 17.5101 20.3701 17.3892 20.4212C17.2682 20.4723 17.1383 20.4991 17.007 20.5H0.993C0.729813 20.5 0.477391 20.3955 0.291196 20.2095C0.105001 20.0235 0.000265042 19.7712 0 19.508V1.492C0 0.955 0.449 0.5 1.002 0.5H11.997L18 6.5ZM16 7.5H11V2.5H2V18.5H16V7.5Z" fill="currentColor"/>
+                                                </svg>
+                                                <span class="btn__text">Документ</span>
+                                            </span>
+                                        </span>
+                                        </div>
+
+                                        <button class="btn btn--blue add_new_post__form_btn" :class="{isMobile, isTablet}" @click.prevent="toSendDataNewPost">
+                                        <span class="btn__content">
+                                            <span class="btn__text">Отправить</span>
+                                        </span>
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <div class="add_new_post_upload add_new_post__upload"
+                                     v-else-if="statusAddPost === 2"
+                                     @dragenter="OnDragEnter"
+                                     @dragleave="OnDragLeave"
+                                     @dragover.prevent
+                                     @drop="onDrop">
+                                    <div class="add_new_post_upload__load" :class="{isMobile, isTablet}">
+                                        <input type="file" id="add_new_post_upload__input" class="add_new_post_upload__input" :multiple="activeItemUpload !== 'cover' && activeItemUpload !== 'video'">
+                                        <div class="add_new_post_upload__row" :class="{isMobile, isTablet}">
+                                            <span class="add_new_post_upload__text">Перетащите сюда файлы или </span>
+                                            <label class="add_new_post_upload__label" for="add_new_post_upload__input">загрузите</label>
+                                        </div>
+                                        <span v-if="activeItemUpload === 'cover'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: PNG, JPG, JPEG, TIFF</span>
+                                        <span v-else-if="activeItemUpload === 'photo'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: PNG, JPG, JPEG, TIFF</span>
+                                        <span v-else-if="activeItemUpload === 'video'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: MP4</span>
+                                        <span v-else-if="activeItemUpload === 'document'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: TXT, DOCX, DOC, XLS, XLSX</span>
+                                    </div>
+                                </div>
+
+                                <div class="add_new_post_send add_new_post__send" v-else-if="statusAddPost === 3">
+                                    <div class="add_new_post_send__wrapper_icon">
+                                        <svg class="add_new_post_send__icon">
+                                            <circle class="add_new_post_send__share" id='add_new_post_send__shape' cx='30' cy='30' r='25' fill="none" stroke="currentColor" stroke-dasharray='1000' :stroke-dashoffset='dashoffsetAddNewPostSend'/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_new_post__bottom" v-if="isShowPreview">
+                            <div class="add_new_post_files_preview">
+                                <div class="add_new_post_files_preview__content">
+                                    <div class="add_new_post_files_preview__item" v-if="previewListCover.length">
+                                        <div class="add_new_post_files_preview__item_content" :class="{isMobile, isTablet}">
+                                            <div class="add_new_post_files_preview__item_left" :class="{isMobile, isTablet}">
+                                                <span class="add_new_post_files_preview__item_title">Обложка</span>
+                                            </div>
+
+                                            <div class="add_new_post_files_preview__item_right" :class="{isMobile, isTablet}">
+                                                <div class="add_new_post_files_preview__item_box" :class="[{'add_new_post_files_preview__item_box--disabled': item.isFailed}, {isMobile, isTablet}]" v-for="item in previewListCover" :key="item.id">
+                                                    <div class="add_new_post_files_preview__item_wrapper_img" v-if="item.src">
+                                                        <img :src="item.src" alt="" class="add_new_post_files_preview__item_img">
+                                                    </div>
+
+                                                    <span class="btn btn--white_remove add_new_post_files_preview__item_remove add_new_post_files_preview__item_remove--absolute" @click="removePreviewItem('cover', item.name)">
+                                                <span class="btn__content">
+                                                    <svg class="btn__icon btn__icon--remove" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="add_new_post_files_preview__item" v-if="previewListPhoto.length">
+                                        <div class="add_new_post_files_preview__item_content" :class="{isMobile, isTablet}">
+                                            <div class="add_new_post_files_preview__item_left" :class="{isMobile, isTablet}">
+                                                <span class="add_new_post_files_preview__item_title">Фото</span>
+                                            </div>
+
+                                            <div class="add_new_post_files_preview__item_right" :class="{isMobile, isTablet}">
+                                                <div class="add_new_post_files_preview__item_box" :class="[{'add_new_post_files_preview__item_box--disabled': item.isFailed}, {isMobile, isTablet}]" v-for="item in previewListPhoto" :key="item.id">
+                                                    <div class="add_new_post_files_preview__item_wrapper_img">
+                                                        <img :src="item.src" alt="" class="add_new_post_files_preview__item_img">
+                                                    </div>
+
+                                                    <span class="btn btn--white_remove add_new_post_files_preview__item_remove add_new_post_files_preview__item_remove--absolute" @click="removePreviewItem('photo', item.name)">
+                                                <span class="btn__content">
+                                                    <svg class="btn__icon btn__icon--remove" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="add_new_post_files_preview__item" v-if="previewListVideo.length">
+                                        <div class="add_new_post_files_preview__item_content" :class="{isMobile, isTablet}">
+                                            <div class="add_new_post_files_preview__item_left" :class="{isMobile, isTablet}">
+                                                <span class="add_new_post_files_preview__item_title">Видео</span>
+                                            </div>
+
+                                            <div class="add_new_post_files_preview__item_right" :class="{isMobile, isTablet}">
+                                                <div class="add_new_post_files_preview__item_box" :class="[{'add_new_post_files_preview__item_box--disabled': item.isFailed}, {isMobile, isTablet}]" v-for="item in previewListVideo" :key="item.id">
+                                                    <div class="add_new_post_files_preview__item_wrapper_video">
+                                                        <video controls="true" class="add_new_post_files_preview__item_video">
+                                                            <source :src="item.src">
+                                                        </video>
+                                                    </div>
+
+                                                    <span class="btn btn--play_video add_new_post_files_preview__item_play_video">
+                                                        <span class="btn__content">
+                                                            <svg class="btn__icon" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 8L0.499999 15.7942L0.5 0.205771L14 8Z" fill="currentColor"/>
+                                                            </svg>
+                                                        </span>
+                                                     </span>
+
+                                                    <span class="btn btn--white_remove add_new_post_files_preview__item_remove add_new_post_files_preview__item_remove--absolute" @click="removePreviewItem('video', item.name)">
+                                                        <span class="btn__content">
+                                                            <svg class="btn__icon btn__icon--remove" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="currentColor"/>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <template v-if="previewListDocument.length">
+                                        <div class="add_new_post_files_preview__item" v-for="item in previewListDocument" :key="item.id">
+                                            <div class="add_new_post_files_preview__item_content" :class="[{'add_new_post_files_preview__item_content--disabled': item.isFailed}, {isMobile, isTablet}]">
+                                                <div class="file_type add_new_post_files_preview__item_file_type">
+                                                    <div class="file_type__content">
+                                                        <div class="file_type__left">
+                                                            <div class="file_type__wrapper_icon">
+                                                                <img class="file_type__icon" src="./img/svg/doc.svg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="file_type__right">
+                                                            <span class="file_type__title">{{ item.title }}</span>
+                                                            <div class="file_type__row">
+                                                                <span class="file_type__size">{{ item.size }}</span>
+                                                                <span class="file_type__date">{{ item.date }},</span>
+                                                                <span class="file_type__time">{{ item.time }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="btn btn--grey_remove add_new_post_files_preview__item_remove" @click="removePreviewItem('document', item.name)">
+                                                    <span class="btn__content">
+                                                        <svg class="btn__icon btn__icon--remove" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="news_m_bl__blocks">
                         <div class="news_m_bl__block">
                             <div class="news_m_bl__r-side">
