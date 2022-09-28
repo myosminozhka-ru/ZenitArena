@@ -274,11 +274,38 @@ $(function () {
   });
 });
 Vue.use(VCalendar);
+
+Vue.directive('click-outside', {
+  bind: function (el, binding, vnode) {
+    el.clickOutsideEvent = function (event) {
+        if (!(el == event.target || el.contains(event.target))) {
+        vnode.context[binding.expression](event);
+      }
+    };
+
+    document.body.addEventListener('click', el.clickOutsideEvent)
+  },
+  unbind: function (el) {
+    document.body.removeEventListener('click', el.clickOutsideEvent)
+  },
+});
+
 window.app = new Vue({
   el: "#app",
   data: () => ({
     selectedDate: null,
     isMounted: false,
+    statusAddPost: 0,
+    upload: true,
+    isFileInZone: false,
+    activeItemUpload: null,
+    dashoffsetAddNewPostSend: 0,
+    files: {
+      cover: [],
+      photo: [],
+      video: [],
+      document: [],
+    },
     sizes: {
       tablet: 1024,
       mobile: 768,
@@ -315,7 +342,8 @@ window.app = new Vue({
       this.sizes.window = window.innerWidth;
     });
   },
-  mounted() {},
+  mounted() {
+  },
   beforeMount() {
     this.isMounted = true;
     // this.modals.init();
@@ -330,6 +358,35 @@ window.app = new Vue({
         this.sizes.window > this.sizes.mobile
       );
     },
+    previewListCover() {
+      return this.createArrayPreviewImg(this.files.cover, 'cover')
+    },
+    previewListPhoto() {
+      return this.createArrayPreviewImg(this.files.photo, 'photo')
+    },
+    previewListVideo() {
+      return this.createArrayPreviewImg(this.files.video, 'video')
+    },
+    previewListDocument() {
+      const result = [];
+      const re = /(\.txt|\.docx|\.doc|\.xls|\.xlsx)$/i;
+      this.files.document.forEach((item, index) => {
+        result.push({
+          id: index,
+          title: item.name.split('.')[0],
+          name: item.name,
+          format: item.name.split('.')[1],
+          size: this.formatBytes(item.size),
+          date: `${("0" + new Date().getDate()).slice(-2)}.${("0" + (new Date().getMonth() + 1)).slice(-2)}.${new Date().getFullYear()}`,
+          time: `${("0" + new Date().getHours()).slice(-2)}:${("0" + new Date().getMinutes()).slice(-2)}`,
+          isFailed: !re.exec(item.name)
+        })
+      })
+      return result;
+    },
+    isShowPreview() {
+      return this.files.cover.length || this.files.photo.length || this.files.video.length || this.files.document.length
+    }
   },
   methods: {
     backPage() {
@@ -337,6 +394,173 @@ window.app = new Vue({
         ? window.history.back()
         : (document.location.href = "/");
     },
+    backToAddPostForm() {
+      if (this.statusAddPost === 2) {
+        this.statusAddPost = 1;
+        this.isFileInZone = false;
+      }
+    },
+    showAddNewPostForm() {
+      this.statusAddPost = 1;
+    },
+    OnDragEnter() {
+      this.isFileInZone = true;
+    },
+    OnDragLeave() {
+
+    },
+    onDrop(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.isDragging = false;
+      const files = event.dataTransfer.files;
+      if (this.activeItemUpload === 'cover' || this.activeItemUpload === 'video') {
+        this.addFiles(Array.from(files)[Array.from(files).length - 1])
+      } else {
+        Array.from(files).forEach(file => this.addFiles(file));
+      }
+      this.statusAddPost = 1;
+      this.isFileInZone = false;
+    },
+    showUpload(type) {
+      this.activeItemUpload = type;
+      this.statusAddPost = 2
+    },
+    formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) {
+        return '0';
+      } else {
+        const k = 1024;
+        const dm = decimals < 0 ? 0 : decimals;
+        const sizes = ['байт', 'КБ', 'МБ', 'ГБ', 'ТБ'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+      }
+    },
+    createArrayPreviewImg(dataArray, type) {
+      const result = [];
+
+      dataArray.forEach((item, index) => {
+        let re;
+        switch (type) {
+          case 'cover':
+            re = /(\.jpg|\.jpeg|\.tiff|\.png)$/i;
+            break;
+          case 'photo':
+            re = /(\.jpg|\.jpeg|\.tiff|\.png)$/i;
+            break;
+          case 'video':
+            re = /(\.mp4)$/i;
+            break;
+        }
+
+        result.push({
+          id: index,
+          name: item.name,
+          src: URL.createObjectURL(item),
+          isFailed: !re.exec(item.name)
+        })
+      })
+
+      return result
+    },
+    addFiles(file) {
+      switch (this.activeItemUpload) {
+        case 'cover':
+          this.files.cover = [file]
+          break;
+        case 'photo':
+          this.files.photo.push(file)
+          break;
+        case 'video':
+          this.files.video = [file]
+          break;
+        case 'document':
+          this.files.document.push(file)
+          break;
+      }
+    },
+    removePreviewItem(type, name) {
+      switch (type) {
+        case 'cover':
+          this.files.cover = this.files.cover.filter(item => item.name !== name)
+          break;
+        case 'photo':
+          this.files.photo = this.files.photo.filter(item => item.name !== name)
+          break;
+        case 'video':
+          this.files.video = this.files.video.filter(item => item.name !== name)
+          break;
+        case 'document':
+          this.files.document = this.files.document.filter(item => item.name !== name)
+          break;
+      }
+    },
+    toSendDataNewPost() {
+      const formData = new FormData();
+      const form = document.getElementById('add_new_post_form');
+      const fields = form.getElementsByClassName("add_new_post__form_field");
+      let errors = {};
+
+      Array.from(fields).forEach(field => {
+        if(!field.value) {
+          errors[field.name] = ''
+          field.classList.add('error')
+        } else {
+          formData.append(field.name, field.value)
+        }
+      })
+
+      formData.append('cover', this.filterSendArrayFile(this.files.cover, this.previewListCover))
+      formData.append('photo', this.filterSendArrayFile(this.files.photo, this.previewListPhoto))
+      formData.append('video', this.filterSendArrayFile(this.files.video, this.previewListVideo))
+      formData.append('document', this.filterSendArrayFile(this.files.document, this.previewListDocument))
+
+      if (Object.keys(errors).length === 0 && Object.getPrototypeOf(errors) === Object.prototype) {
+        $.ajax({
+          type: "POST",
+          url: "/",
+          data: formData,
+          contentType: false,
+          processData: false,
+          dataType: "json",
+          beforeSend: function() {
+            this.statusAddPost = 3;
+          },
+          xhr: function()
+          {
+            const xhr = new window.XMLHttpRequest();
+            xhr.upload.addEventListener("progress", function(evt){
+              if (evt.lengthComputable) {
+                const percentComplete = evt.loaded / evt.total;
+                this.dashoffsetAddNewPostSend = percentComplete * 10;
+              }
+            }, false);
+            return xhr;
+          },
+          success: function() {
+            fields.forEach(field => field.value = '');
+            this.files.cover = [];
+            this.files.photo = [];
+            this.files.video = [];
+            this.files.document = [];
+            this.statusAddPost = 2;
+          },
+          error: function() {
+            this.statusAddPost = 2;
+          }
+        })
+      }
+
+    },
+    filterSendArrayFile(sendArray, viewArray){
+      return sendArray.map(item => {
+        return viewArray.some(innerItem => innerItem.name === item.name && innerItem.isFailed === false) ? item : false
+      }).filter(item => item)
+    },
+    onFocusInputAndTextarea(event) {
+      event.target.classList.remove('error')
+    }
   },
 });
 $(function () {

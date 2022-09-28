@@ -1,0 +1,41 @@
+.file_type {
+  font-family: "HeliosC", serif;
+}
+
+.file_type__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.file_type__left {
+  margin-right: 16px;
+}
+
+.file_type__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.file_type__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: $black;
+  margin-bottom: 4px;
+}
+
+.file_type__row {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: $darkGrey;
+}
+
+.file_type__size,
+.file_type__date {
+  margin-right: 6px;
+}

@@ -1,0 +1,24 @@
+.add_new_post_send {
+  display: flex;
+  min-height: 250px;
+}
+
+.add_new_post_send__wrapper_icon {
+  margin: auto;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: $standardBlue;
+}
+
+.add_new_post_send__icon {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  color: $darkBlue;
+}
+
+.add_new_post_send__share {
+  stroke-width: 10;
+}
