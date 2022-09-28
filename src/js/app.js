@@ -299,7 +299,7 @@ window.app = new Vue({
     upload: true,
     isFileInZone: false,
     activeItemUpload: null,
-    dashoffsetAddNewPostSend: 0,
+    dashoffsetAddNewPostSend: 1000,
     files: {
       cover: [],
       photo: [],
@@ -517,6 +517,11 @@ window.app = new Vue({
       formData.append('document', this.filterSendArrayFile(this.files.document, this.previewListDocument))
 
       if (Object.keys(errors).length === 0 && Object.getPrototypeOf(errors) === Object.prototype) {
+        this.statusAddPost = 3;
+        setTimeout(() => {
+          this.dashoffsetAddNewPostSend = 0
+        }, 0)
+        setTimeout(() => {
         $.ajax({
           type: "POST",
           url: "/",
@@ -524,34 +529,34 @@ window.app = new Vue({
           contentType: false,
           processData: false,
           dataType: "json",
-          beforeSend: function() {
+          beforeSend: () => {
             this.statusAddPost = 3;
           },
-          xhr: function()
+          xhr: () =>
           {
             const xhr = new window.XMLHttpRequest();
-            xhr.upload.addEventListener("progress", function(evt){
+            xhr.upload.addEventListener("progress", (evt) => {
               if (evt.lengthComputable) {
                 const percentComplete = evt.loaded / evt.total;
-                this.dashoffsetAddNewPostSend = percentComplete * 10;
+                this.dashoffsetAddNewPostSend = 1000 - percentComplete * 10;
               }
             }, false);
             return xhr;
           },
-          success: function() {
+          success: () => {
             fields.forEach(field => field.value = '');
             this.files.cover = [];
             this.files.photo = [];
             this.files.video = [];
             this.files.document = [];
-            this.statusAddPost = 2;
+            this.statusAddPost = 1;
           },
-          error: function() {
-            this.statusAddPost = 2;
+          error: () => {
+            this.statusAddPost = 1;
           }
         })
+        }, 1000)
       }
-
     },
     filterSendArrayFile(sendArray, viewArray){
       return sendArray.map(item => {
