@@ -35,6 +35,7 @@ $(document).ready(function () {
   $(".slider-for").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: false,
     arrows: false,
     fade: true,
     asNavFor: ".slider-nav",
@@ -43,6 +44,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: ".slider-for",
+    infinite: false,
     dots: false,
     arrows: true,
     centerMode: true,
@@ -51,11 +53,68 @@ $(document).ready(function () {
 
   Object.assign(Datepicker.locales, ru);
   document.querySelectorAll(".date_block[data-date]").forEach((item) => {
-    console.log(item);
-    new Datepicker(item, {
-      language: "ru",
-    });
+    // console.log(item);
+    if (item.dataset.dates) {
+      const arrayDates = item.dataset.dates.split(", ")
+      const startDate = item.dataset.start;
+      if (startDate) {
+        const arrayDate = startDate.split("/")
+        new Datepicker(item, {
+          language: "ru",
+          maxNumberOfDates: arrayDates.length,
+          datesDisabled: arrayDates,
+          defaultViewDate: new Date(arrayDate[2], +arrayDate[1] - 1, +arrayDate[0], 0, 0, 0, 0)
+        });
+      } else {
+        new Datepicker(item, {
+          language: "ru",
+          maxNumberOfDates: arrayDates.length,
+          datesDisabled: arrayDates
+        });
+      }
+    } else {
+      new Datepicker(item, {
+        language: "ru",
+      });
+    }
   });
+
+  document.querySelectorAll(".dates_block[data-dates]").forEach((item) => {
+    const arrayDates = item.dataset.dates.split(", ")
+    const startDate = item.dataset.start;
+    if (startDate) {
+      const arrayDate = startDate.split("/")
+      new Datepicker(item, {
+        language: "ru",
+        maxNumberOfDates: arrayDates.length,
+        datesDisabled: arrayDates,
+        defaultViewDate: new Date(arrayDate[2], +arrayDate[1] - 1, +arrayDate[0], 0, 0, 0, 0)
+      });
+    } else {
+      new Datepicker(item, {
+        language: "ru",
+        maxNumberOfDates: arrayDates.length,
+        datesDisabled: arrayDates
+      });
+    }
+
+
+    item.addEventListener("click", function (e) {
+          if (!e.target.dataset.date) return;
+          const date = new Date(+e.target.dataset.date),
+              day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate(),
+              month = ((date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1)),
+              resultDate = day + "/" + month + "/" + date.getFullYear();
+              $(".calendar_block__day").hide(),
+              $(`.calendar_block__day[data-day-event='${resultDate}']`).show(),
+              $(".sl_js").slick("refresh");
+              $(".dates__blocks").slick("refresh");
+        });
+  });
+
+  setTimeout(() => {
+    $(".calendar_block__day:not(:first-child)").hide();
+  }, 500);
 
   $(".burger__icon").on("click", function () {
     $("html").addClass("owh");
@@ -386,6 +445,27 @@ window.app = new Vue({
     },
     isShowPreview() {
       return this.files.cover.length || this.files.photo.length || this.files.video.length || this.files.document.length
+    },
+
+    acceptFilesUpload() {
+      let result = '';
+
+      switch (this.activeItemUpload) {
+        case 'cover':
+        case 'photo':
+          result = '.jpg, .jpeg, .tiff, .png'
+          break
+
+        case 'video':
+          result = '.mp4'
+          break
+
+        case 'document':
+          result = '.txt, .docx, .doc, .xls, .xlsx'
+          break
+      }
+
+      return result
     }
   },
   methods: {
@@ -413,7 +493,7 @@ window.app = new Vue({
       event.preventDefault();
       event.stopPropagation();
       this.isDragging = false;
-      const files = event.dataTransfer.files;
+      const files = event.dataTransfer?.files || event.target?.files;
       if (this.activeItemUpload === 'cover' || this.activeItemUpload === 'video') {
         this.addFiles(Array.from(files)[Array.from(files).length - 1])
       } else {
@@ -524,7 +604,7 @@ window.app = new Vue({
         setTimeout(() => {
         $.ajax({
           type: "POST",
-          url: "/",
+          url: "/information/",
           data: formData,
           contentType: false,
           processData: false,
