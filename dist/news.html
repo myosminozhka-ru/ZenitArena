@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220928074001">
+    <link rel="stylesheet" href="css/style.css?_v=20221006140621">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -344,13 +344,12 @@
                                      @dragover.prevent
                                      @drop="onDrop">
                                     <div class="add_new_post_upload__load" :class="{isMobile, isTablet}">
-                                        <input type="file" id="add_new_post_upload__input" class="add_new_post_upload__input" :multiple="activeItemUpload !== 'cover' && activeItemUpload !== 'video'">
+                                        <input type="file" id="add_new_post_upload__input" class="add_new_post_upload__input" @change="onDrop" :accept="acceptFilesUpload" :multiple="activeItemUpload !== 'cover' && activeItemUpload !== 'video'">
                                         <div class="add_new_post_upload__row" :class="{isMobile, isTablet}">
                                             <span class="add_new_post_upload__text">Перетащите сюда файлы или </span>
                                             <label class="add_new_post_upload__label" for="add_new_post_upload__input">загрузите</label>
                                         </div>
-                                        <span v-if="activeItemUpload === 'cover'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: PNG, JPG, JPEG, TIFF</span>
-                                        <span v-else-if="activeItemUpload === 'photo'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: PNG, JPG, JPEG, TIFF</span>
+                                        <span v-if="activeItemUpload === 'cover' || activeItemUpload === 'photo'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: PNG, JPG, JPEG, TIFF</span>
                                         <span v-else-if="activeItemUpload === 'video'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: MP4</span>
                                         <span v-else-if="activeItemUpload === 'document'" class="add_new_post_upload__info_format" :class="{isMobile, isTablet}">Поддерживаемые файлы: TXT, DOCX, DOC, XLS, XLSX</span>
                                     </div>
@@ -602,6 +601,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20220928074001"></script>
+    <script src="js/app.min.js?_v=20221006140621"></script>
 </body>
 </html>
