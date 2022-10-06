@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
     <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20221006140621">
+    <link rel="stylesheet" href="css/style.css?_v=20221006161817">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -273,14 +273,14 @@
                         <div class="add_new_post__top" :class="{isMobile, isTablet}">
                             <div class="add_new_post__content"
                                  :class="[{'add_new_post__content--upload': statusAddPost === 2}, {'add_new_post__content--file-in-zone': isFileInZone}, {isMobile, isTablet}]">
-                                <div class="add_new_post__start_block" v-if="statusAddPost === 0" @click="showAddNewPostForm">
+                                <div class="add_new_post__start_block" v-show="statusAddPost === 0" @click="showAddNewPostForm">
                                     <div class="add_new_post__wrapper_img" :class="{isMobile, isTablet}">
                                         <img src="./img/avatar.png" alt="" class="add_new_post__img">
                                     </div>
                                     <span class="add_new_post__start_text" :class="{isMobile, isTablet}">Написать новость</span>
                                 </div>
 
-                                <form id="add_new_post_form" action="" class="add_new_post__form" v-else-if="statusAddPost === 1">
+                                <form id="add_new_post_form" action="" class="add_new_post__form" v-show="statusAddPost === 1">
                                     <div class="add_new_post__form_top">
                                         <input class="add_new_post__form_field add_new_post__form_input" name="title" type="text" placeholder="Заголовок" :class="{isMobile, isTablet}" @focus="onFocusInputAndTextarea">
                                         <input class="add_new_post__form_field add_new_post__form_input" name="description" type="text" placeholder="Описание" :class="{isMobile, isTablet}" @focus="onFocusInputAndTextarea">
@@ -338,7 +338,7 @@
                                 </form>
 
                                 <div class="add_new_post_upload add_new_post__upload"
-                                     v-else-if="statusAddPost === 2"
+                                     v-show="statusAddPost === 2"
                                      @dragenter="OnDragEnter"
                                      @dragleave="OnDragLeave"
                                      @dragover.prevent
@@ -355,7 +355,7 @@
                                     </div>
                                 </div>
 
-                                <div class="add_new_post_send add_new_post__send" v-else-if="statusAddPost === 3">
+                                <div class="add_new_post_send add_new_post__send" v-show="statusAddPost === 3">
                                     <div class="add_new_post_send__wrapper_icon">
                                         <svg class="add_new_post_send__icon">
                                             <circle class="add_new_post_send__share" id='add_new_post_send__shape' cx='30' cy='30' r='25' fill="none" stroke="currentColor" stroke-dasharray='1000' :stroke-dashoffset='dashoffsetAddNewPostSend'/>
@@ -601,6 +601,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20221006140621"></script>
+    <script src="js/app.min.js?_v=20221006161817"></script>
 </body>
 </html>

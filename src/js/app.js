@@ -591,16 +591,24 @@ window.app = new Vue({
         }
       })
 
-      formData.append('cover', this.filterSendArrayFile(this.files.cover, this.previewListCover))
-      formData.append('photo', this.filterSendArrayFile(this.files.photo, this.previewListPhoto))
-      formData.append('video', this.filterSendArrayFile(this.files.video, this.previewListVideo))
-      formData.append('document', this.filterSendArrayFile(this.files.document, this.previewListDocument))
+      for (let i = 0; i < this.filterSendArrayFile(this.files.cover, this.previewListCover).length; i++) {
+        formData.append('cover['+ i +']',  this.filterSendArrayFile(this.files.cover, this.previewListCover)[i])
+      }
+
+      for (let i = 0; i < this.filterSendArrayFile(this.files.photo, this.previewListPhoto).length; i++) {
+        formData.append('photo['+ i +']',  this.filterSendArrayFile(this.files.photo, this.previewListPhoto)[i])
+      }
+
+      for (let i = 0; i < this.filterSendArrayFile(this.files.video, this.previewListVideo).length; i++) {
+        formData.append('video['+ i +']',  this.filterSendArrayFile(this.files.video, this.previewListVideo)[i])
+      }
+
+      for (let i = 0; i < this.filterSendArrayFile(this.files.document, this.previewListDocument).length; i++) {
+        formData.append('document['+ i +']',  this.filterSendArrayFile(this.files.document, this.previewListDocument)[i])
+      }
 
       if (Object.keys(errors).length === 0 && Object.getPrototypeOf(errors) === Object.prototype) {
         this.statusAddPost = 3;
-        setTimeout(() => {
-          this.dashoffsetAddNewPostSend = 0
-        }, 0)
         setTimeout(() => {
         $.ajax({
           type: "POST",
